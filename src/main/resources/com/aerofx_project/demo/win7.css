@@ -1,22 +1,54 @@
-#windows7-default {
-    -fx-background-color:
-        #3c7fb1,
-        linear-gradient(#fafdfe, #e8f5fc),
-        linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #a7d9f5 100%);
-    -fx-background-insets: 0,1,2;
-    -fx-background-radius: 3,2,1;
-    -fx-padding: 3 30 3 30;
-    -fx-text-fill: black;
-    -fx-font-size: 14px;
+.root{
+    -fx-text-base-color: black;
+    -fx-text-fill: -fx-text-base-color;
+
+    /*No difference to see*/
+    -fx-font-smoothing-type: lcd;
+
+    /*This is the default Windows-font*/
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 11.0;
 }
-.button {
+
+/********************************************
+*                                           *
+*       Button & Default-Button             *
+*                                           *
+*********************************************/
+.button{
     -fx-background-color:
         #707070,
         linear-gradient(#fcfcfc, #f3f3f3),
-        linear-gradient(#f2f2f2 0%, #ebebeb 49%, #dddddd 50%, #cfcfcf 100%);
+        linear-gradient(#f2f2f2 0%, #ebebeb 45%, #dddddd 55%, #cfcfcf 100%);
     -fx-background-insets: 0,1,2;
     -fx-background-radius: 3,2,1;
     -fx-padding: 3 30 3 30;
-    -fx-text-fill: black;
-    -fx-font-size: 14px;
 }
+
+.button:default, .button:hover{
+    -fx-background-color:
+        #4D71B6,
+        linear-gradient(#4ACEFF, #4ACEFF),
+        linear-gradient(#EAF2F7 0%, #EAF2F7 45%, #C5D9EA 55%, #C5D9EA 100%);
+}
+
+.button:armed{
+    -fx-background-color:
+        #4D71B6,
+        linear-gradient(#3C578F, #3C578F),
+        linear-gradient(#DDEEFC 0%, #DDEEFC 45%, #79B0E5 55%, #79B0E5 100%);
+}
+
+/********************************************
+*                                           *
+*       TextField                           *
+*                                           *
+*********************************************/
+.text-field{
+    -fx-border-color: #E3E8F0;
+}
+.text-field:focused{
+    -fx-border-color: #BFD9F0;
+}
+
+/* Background on focus: BFD9F0 */
