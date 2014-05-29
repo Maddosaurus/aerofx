@@ -10,6 +10,8 @@
 .text{
     -fx-font-smoothing-type: lcd;
 }
+
+
 /********************************************
 *                                           *
 *       Button & Default-Button             *
@@ -17,27 +19,35 @@
 *********************************************/
 .button{
     -fx-background-color:
-        #707070,
-        linear-gradient(#fcfcfc, #f3f3f3),
-        linear-gradient(#f2f2f2 0%, #ebebeb 45%, #dddddd 55%, #cfcfcf 100%);
+        rgb(112,112,112)
+        linear-gradient(rgb(252,252,252), rgb(252,252,252)),
+        linear-gradient(rgb(242,242,242) 0%, rgb(235,235,235) 45%, rgb(221,221,221) 55%, rgb(207,207,207) 100%);
     -fx-background-insets: 0,1,2;
     -fx-background-radius: 3,2,1;
     -fx-padding: 3 30 3 30;
 }
 
-.button:default, .button:hover{
+.button:hover{
     -fx-background-color:
-        #4D71B6,
-        linear-gradient(#4ACEFF, #4ACEFF),
-        linear-gradient(#EAF2F7 0%, #EAF2F7 45%, #C5D9EA 55%, #C5D9EA 100%);
+        rgb(60,127,177),
+        linear-gradient(rgb(250,253,254),rgb(250,253,254)),
+        linear-gradient(rgb(234, 246, 253) 0%, rgb(217, 240, 252) 45%, rgb(190, 230, 253) 55%, rgb(167, 217, 245) 100%);
+}
+
+.button:default{
+    -fx-background-color:
+        rgb(60,127,177),
+        linear-gradient(rgb(47,212,255), rgb(47,212,255)),
+        linear-gradient(rgb(234,246,252) 0%, rgb(228,243,252) 45%, rgb(202,233,250) 55%, rgb(182,222,245) 100%);
 }
 
 .button:armed{
     -fx-background-color:
-        #4D71B6,
-        linear-gradient(#3C578F, #3C578F),
-        linear-gradient(#DDEEFC 0%, #DDEEFC 45%, #79B0E5 55%, #79B0E5 100%);
+        rgb(44,98,139),
+        linear-gradient(rgb(158,176,186), rgb(158,176,186)),
+        linear-gradient(rgb(229,244,252) 0%, rgb(196,229,246) 45%, rgb(152,209,239) 55%, rgb(104,179,219) 100%);
 }
+
 
 /********************************************
 *                                           *
@@ -46,13 +56,17 @@
 *********************************************/
 .text-field{
    /* If four values are used, the sides are top, right, bottom, left. */
-   -fx-border-color: rgb(170.0, 170.0, 178.0) rgb(218.0, 220.0, 230.0) rgb(226.0, 231.0, 239.0) rgb(226.0, 224.0, 234.0);
+   -fx-border-color: rgb(170,170,178) rgb(218,220,230) rgb(226,231.0,239) rgb(226,224,234);
+   -fx-cursor: text;
+   -fx-effect: null;
 }
 .text-field:focused{
-    -fx-border-color: rgb(77.0, 109.0, 178.0) rgb(166.0, 194.0, 231.0) rgb(184.0, 212.0, 240.0) rgb(183.0, 200.0, 234.0);
+    -fx-border-color: rgb(61,123,173) rgb(164,201,227) rgb(183,217,237) rgb(181,207,231);
     /* Remove the blue glow on focus */
     -fx-background-insets: 0, 0, 0, 0;
+    -fx-effect: null;
 }
+
 
 /********************************************
 *                                           *
