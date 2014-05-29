@@ -7,7 +7,7 @@
     -fx-font-size: 11.0;
 }
 
-.text {
+.text{
     -fx-font-smoothing-type: lcd;
 }
 /********************************************
@@ -53,3 +53,34 @@
     /* Remove the blue glow on focus */
     -fx-background-insets: 0, 0, 0, 0;
 }
+
+/********************************************
+*                                           *
+*       CheckBox                            *
+*                                           *
+*********************************************/
+.check-box{
+    -fx-label-padding: 0.0em 0.0em 0.0em 0.28em;
+}
+
+.check-box > .box{
+    -fx-background-insets: 0, 0, 0, 0;
+    -fx-border-color: rgb(140.0, 141.0, 141.0);
+}
+
+.check-box:disabled > .box{
+    -fx-background-color:
+        linear-gradient(rgb(239.0, 239.0, 239.0), rgb(250.0, 250.0, 250.0));
+}
+
+/*.check-box:focused{
+-fx-background-insets: 0, 0, 0, 0;
+    -fx-focus-color: transparent;
+    -fx-accent: transparent;
+}
+
+.check-box:selected{
+-fx-background-insets: 0, 0, 0, 0;
+    -fx-focus-color: transparent;
+    -fx-accent: transparent;
+}*/

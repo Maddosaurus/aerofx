@@ -9,12 +9,14 @@
       <Button layoutX="25.0" layoutY="23.0" mnemonicParsing="false" text="Click Me" />
       <Label layoutX="25.0" layoutY="63.0" text="Just some Text" />
       <TextField layoutX="25.0" layoutY="88.0" />
-      <CheckBox layoutX="193.0" layoutY="38.0" mnemonicParsing="false" text="CheckBox" />
+      <CheckBox layoutX="193.0" layoutY="26.0" mnemonicParsing="false" text="CheckBox" />
       <RadioButton layoutX="193.0" layoutY="92.0" mnemonicParsing="false" selected="true" text="RadioButton">
          <toggleGroup>
             <ToggleGroup fx:id="one" />
          </toggleGroup>
       </RadioButton>
       <RadioButton layoutX="193.0" layoutY="122.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$one" />
+      <CheckBox disable="true" layoutX="193.0" layoutY="54.0" mnemonicParsing="false" text="CheckBox" />
+      <RadioButton disable="true" layoutX="193.0" layoutY="152.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$one" />
    </children>
 </AnchorPane>
