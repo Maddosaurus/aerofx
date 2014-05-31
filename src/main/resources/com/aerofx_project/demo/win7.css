@@ -73,9 +73,9 @@
 *       CheckBox                            *
 *                                           *
 *********************************************/
-/* TODO: Style the mark by using an fx-shape */
+/* TODO: Style the mark by using a fx-shape */
 .check-box{
-    -fx-label-padding: 0.0em 0.0em 0.0em 0.28em;
+    -fx-label-padding: 0.0em 0.0em 0.0em 0.05em;
 }
 
 .check-box > .box{
@@ -109,3 +109,4 @@
     -fx-background-color:
         linear-gradient(rgb(239.0, 239.0, 239.0), rgb(250.0, 250.0, 250.0));
 }
+
