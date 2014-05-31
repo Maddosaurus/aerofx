@@ -5,6 +5,9 @@
     /* This is the default Windows-font */
     -fx-font-family: "Segoe UI";
     -fx-font-size: 11.0;
+
+    /* For debugging purposes */
+    -fx-background-color: #FFFFFF;
 }
 
 .text{
@@ -111,4 +114,3 @@
     -fx-background-color:
         linear-gradient(rgb(239.0, 239.0, 239.0), rgb(250.0, 250.0, 250.0));
 }
-
