@@ -57,6 +57,8 @@
 .text-field{
    /* If four values are used, the sides are top, right, bottom, left. */
    -fx-border-color: rgb(170,170,178) rgb(218,220,230) rgb(226,231.0,239) rgb(226,224,234);
+   -fx-background-color: rgb(255,255,255);
+   -fx-padding: 0.2em;
    -fx-cursor: text;
    -fx-effect: null;
 }
