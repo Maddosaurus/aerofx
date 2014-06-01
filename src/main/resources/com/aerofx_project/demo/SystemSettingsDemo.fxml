@@ -1,30 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.effect.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aerofx_project.demo.SystemSettingsDemoController">
+<!--
+  ~ Copyright (c) 2014, Matthias Meidinger
+  ~ All rights reserved.
+  ~
+  ~ Redistribution and use in source and binary forms, with or without
+  ~ modification, are permitted provided that the following conditions are met:
+  ~
+  ~ 1. Redistributions of source code must retain the above copyright notice, this
+  ~    list of conditions and the following disclaimer.
+  ~ 2. Redistributions in binary form must reproduce the above copyright notice,
+  ~    this list of conditions and the following disclaimer in the documentation
+  ~    and/or other materials provided with the distribution.
+  ~
+  ~ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+  ~ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  ~ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  ~ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+  ~ ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+  ~ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+  ~ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+  ~ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  ~ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+  ~ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  ~
+  ~ The views and conclusions contained in the software and documentation are those
+  ~ of the authors and should not be interpreted as representing official policies,
+  ~ either expressed or implied, of the FreeBSD Project.
+  -->
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="408.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aerofx_project.demo.SystemSettingsDemoController">
    <children>
-      <TabPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="432.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutX="11.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="405.0" prefWidth="390.0" tabClosingPolicy="UNAVAILABLE">
          <tabs>
             <Tab text="Computername">
                <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="418.0" prefWidth="413.0">
                      <children>
-                        <Label layoutX="68.0" layoutY="30.0" prefHeight="34.0" prefWidth="357.0" text="Folgende Informationen werden zum Identifizieren des Computers &#10;im Netzwerk verwendet" />
-                        <Label layoutX="14.0" layoutY="86.0" text="Computerbeschreibung:" />
-                        <TextField layoutX="183.0" layoutY="82.0" prefHeight="25.0" prefWidth="229.0" />
+                        <Label layoutX="42.0" layoutY="14.0" prefHeight="34.0" prefWidth="357.0" text="Folgende Informationen werden zum Identifizieren des Computers &#10;im Netzwerk verwendet">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="65.0" text="Computerbeschreibung:" />
+                        <TextField layoutX="165.0" layoutY="61.0" prefHeight="25.0" prefWidth="202.0" />
                         <Label layoutX="183.0" layoutY="115.0" text="Zum Beispiel: &quot;Spielecomputer&quot; oder &#10;&quot;Heikes Computer&quot;" />
                         <Label layoutX="14.0" layoutY="167.0" text="Vollständiger Computername:" />
                         <Label layoutX="183.0" layoutY="167.0" text="Home-PC" />
                         <Label layoutX="14.0" layoutY="196.0" text="Arbeitsgruppe" />
                         <Label layoutX="183.0" layoutY="196.0" text="WORKGROUP" />
                         <Label layoutX="14.0" layoutY="247.0" text="Klicken Sie auf &quot;Netzwerk-ID&quot;, um einer Domäne&#10;oder einer Arbeitsgruppe mithilfe eines Assistenten&#10;beizutreten." />
-                        <Button layoutX="312.0" layoutY="250.0" mnemonicParsing="false" text="Netzwerk-ID..." />
+                        <Button layoutX="293.0" layoutY="250.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="98.0" text="Netzwerk-ID..." />
                         <Label layoutX="14.0" layoutY="326.0" text="Klicken Sie auf &quot;Ändern&quot;, um diesen Computer&#10;umzubennen oder dessen Domäne oder&#10;Arbeitsgruppe zu ändern." />
-                        <Button layoutX="312.0" layoutY="339.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" text="Ändern..." />
+                        <Button layoutX="297.0" layoutY="339.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" text="Ändern..." />
                      </children>
                   </AnchorPane>
                </content>
@@ -34,13 +68,13 @@
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <Separator layoutX="129.0" layoutY="35.0" prefWidth="200.0" />
-                        <Label layoutX="41.0" layoutY="28.0" text="Geräte-Manager" />
-                        <Label layoutX="85.0" layoutY="57.0" text="Der Geräte-Manager listet alle auf dem Computer installierten&#10;Hardwaregeräte auf. Verwenden Sie den Geräte-Manager, um&#10;die Eigenschaften eines Gerätes zu ändern" />
-                        <Label layoutX="85.0" layoutY="232.0" text="Wählen Sie aus, ob für Ihre Geräte Treibersoftware und&#10;detaillierte Informationen heruntergeladen werden sollen." />
-                        <Label layoutX="41.0" layoutY="192.0" text="Geräteinstallationseinstellungen" />
+                        <Label layoutX="17.0" layoutY="29.0" text="Geräte-Manager" />
+                        <Label layoutX="61.0" layoutY="58.0" text="Der Geräte-Manager listet alle auf dem Computer installierten&#10;Hardwaregeräte auf. Verwenden Sie den Geräte-Manager, um&#10;die Eigenschaften eines Gerätes zu ändern" />
+                        <Label layoutX="61.0" layoutY="233.0" text="Wählen Sie aus, ob für Ihre Geräte Treibersoftware und&#10;detaillierte Informationen heruntergeladen werden sollen." />
+                        <Label layoutX="17.0" layoutY="193.0" text="Geräteinstallationseinstellungen" />
                         <Separator layoutX="218.0" layoutY="202.0" prefHeight="0.0" prefWidth="111.0" />
-                        <Button layoutX="192.0" layoutY="136.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="214.0" text="Geräte-Manager" />
-                        <Button layoutX="192.0" layoutY="287.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="214.0" text="Geräteinstallationseinstellungen" />
+                        <Button layoutX="168.0" layoutY="137.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="214.0" text="Geräte-Manager" />
+                        <Button layoutX="168.0" layoutY="288.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="214.0" text="Geräteinstallationseinstellungen" />
                         <Separator layoutX="17.0" layoutY="171.0" prefHeight="0.0" prefWidth="399.0" />
                         <Separator layoutX="11.0" layoutY="322.0" prefHeight="0.0" prefWidth="399.0" />
                      </children>
@@ -64,7 +98,7 @@
                         <Label layoutX="26.0" layoutY="165.0" text="Desktopeinstellungen bezüglich der Anmeldung" />
                         <Button layoutX="285.0" layoutY="297.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="102.0" text="Einstellungen" />
                         <Label layoutX="26.0" layoutY="263.0" text="Systemstart, Systemfehler und Debuginformationen" />
-                        <Button layoutX="230.0" layoutY="370.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="153.0" text="Umgebungsvariablen" />
+                        <Button layoutX="234.0" layoutY="342.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="153.0" text="Umgebungsvariablen" />
                         <Separator layoutX="10.0" layoutY="139.0" prefHeight="0.0" prefWidth="399.0" />
                         <Separator layoutX="11.0" layoutY="235.0" prefHeight="0.0" prefWidth="399.0" />
                         <Separator layoutX="10.0" layoutY="330.0" prefHeight="0.0" prefWidth="399.0" />
@@ -76,18 +110,21 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="87.0" layoutY="14.0" text="Verwenden Sie den Computerschutz, um unerwünschte&#10;Systemänderungen rückgängig zu machen und vorherige&#10;Versionen von Dateien wiederherzustellen. &lt;a&gt;Was ist der&#10;Computerschutz?&lt;/a&gt;" />
-                        <Label layoutX="21.0" layoutY="103.0" text="Systemwiederherstellung" />
-                        <Label layoutX="31.0" layoutY="128.0" text="Sie können unerwünschte&#10;Systemänderungen rückgängig machen,&#10;indem Sie den Computer auf einen&#10;vorherigen Wiederherstellungspunkt&#10;zurücksetzen." />
-                        <Label layoutX="21.0" layoutY="221.0" text="Schutzeinstellungen" />
-                        <Label layoutX="31.0" layoutY="340.0" text="Konfigurieren Sie Wiederherstellungs-&#10;einstellungen, verwalten Sie den Speicherplatz,&#10;und löschen Sie Wiederherstellungspunkte" />
-                        <Label layoutX="30.0" layoutY="408.0" text="Dient zum sofortigen Erstellen eines&#10;Wiederherstellungspunktes für die Laufwerke mit&#10;aktiviertem Systemschutz" />
-                        <Button layoutX="319.0" layoutY="353.0" mnemonicParsing="false" text="Konfigurieren..." />
-                        <Button layoutX="319.0" layoutY="421.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Erstellen..." />
-                        <Separator layoutX="171.0" layoutY="111.0" prefWidth="200.0" />
-                        <Separator layoutX="171.0" layoutY="228.0" prefWidth="200.0" />
-                        <Button layoutX="258.0" layoutY="128.0" mnemonicParsing="false" text="Systemwiederherstellung..." />
-                        <TableView layoutX="30.0" layoutY="247.0" prefHeight="74.0" prefWidth="358.0">
+                        <Label layoutX="74.0" layoutY="6.0" text="Verwenden Sie den Computerschutz, um unerwünschte&#10;Systemänderungen rückgängig zu machen und vorherige&#10;Versionen von Dateien wiederherzustellen. &lt;a&gt;Was ist der&#10;Computerschutz?&lt;/a&gt;" />
+                        <Label layoutX="17.0" layoutY="81.0" text="Systemwiederherstellung" />
+                        <Label layoutX="27.0" layoutY="106.0" text="Sie können unerwünschte&#10;Systemänderungen rückgängig machen,&#10;indem Sie den Computer auf einen&#10;vorherigen Wiederherstellungspunkt&#10;zurücksetzen." />
+                        <Label layoutX="22.0" layoutY="200.0" text="Schutzeinstellungen" />
+                        <Label layoutX="15.0" layoutY="292.0" text="Konfigurieren Sie Wiederherstellungs-&#10;einstellungen, verwalten Sie den Speicherplatz,&#10;und löschen Sie Wiederherstellungspunkte">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                        <Label layoutX="17.0" layoutY="340.0" text="Dient zum sofortigen Erstellen eines&#10;Wiederherstellungspunktes für die Laufwerke mit&#10;aktiviertem Systemschutz" />
+                        <Button layoutX="276.0" layoutY="305.0" mnemonicParsing="false" text="Konfigurieren..." />
+                        <Button layoutX="288.0" layoutY="353.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Erstellen..." />
+                        <Separator layoutX="167.0" layoutY="89.0" prefWidth="200.0" />
+                        <Separator layoutX="172.0" layoutY="207.0" prefWidth="200.0" />
+                        <Button layoutX="254.0" layoutY="106.0" mnemonicParsing="false" text="Systemwiederherstellung..." />
+                        <TableView layoutX="30.0" layoutY="217.0" prefHeight="74.0" prefWidth="358.0">
                           <columns>
                             <TableColumn prefWidth="229.0" text="Verfügbare Laufwerke" />
                             <TableColumn minWidth="0.0" prefWidth="128.0" text="Schutz" />
@@ -125,8 +162,8 @@
             </Tab>
          </tabs>
       </TabPane>
-      <Button layoutX="207.0" layoutY="525.0" mnemonicParsing="false" text="OK" />
-      <Button layoutX="260.0" layoutY="525.0" mnemonicParsing="false" text="Abbrechen" />
-      <Button layoutX="347.0" layoutY="525.0" mnemonicParsing="false" text="Übernehmen" />
+      <Button layoutX="169.0" layoutY="420.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="73.0" text="OK" />
+      <Button layoutX="251.0" layoutY="420.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="73.0" text="Abbrechen" />
+      <Button layoutX="331.0" layoutY="420.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="73.0" text="Übernehmen" />
    </children>
 </AnchorPane>
