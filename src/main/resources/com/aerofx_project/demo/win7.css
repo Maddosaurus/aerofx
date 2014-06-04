@@ -33,7 +33,7 @@
 
     /* This is the default Windows-font */
     -fx-font-family: "Segoe UI";
-    -fx-font-size: 11.0;
+    -fx-font-size: 10.5;
 
     /* For debugging purposes*/
     -fx-background-color: rgb(240,240,240);
@@ -155,7 +155,8 @@
 }
 
 .radio-button > .radio{
-    -fx-padding: 0.25em;
+    -fx-pref-height: 12px;
+    -fx-pref-width: 12px;
     -fx-background-color:
         rgb(147,148,148),
         rgb(239,239,239),
@@ -165,7 +166,6 @@
 }
 
 .radio-button:hover > .radio{
-    -fx-padding: 0.25em;
     -fx-background-color:
         rgb(93,140,167),
         rgb(216,244,246),
@@ -175,7 +175,6 @@
 }
 
 .radio-button:pressed > .radio{
-    -fx-padding: 0.25em;
     -fx-background-color:
         rgb(58,103,135),
         rgb(198,239,241),
@@ -185,7 +184,7 @@
 }
 
 .radio-button:selected > .radio > .dot{
-    -fx-padding: 0.3em;
+    -fx-padding: 0.28em;
     -fx-pref-height: 3px;
     -fx-pref-width: 3px;
     -fx-background-color:
