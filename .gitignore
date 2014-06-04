@@ -16,3 +16,6 @@ out/
 log/
 target/
 
+#Ignore ScenicView
+ScenicView.jar
+scenicView.properties
