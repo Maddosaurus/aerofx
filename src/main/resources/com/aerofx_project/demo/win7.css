@@ -200,17 +200,39 @@
 *       TabPane                             *
 *                                           *
 *********************************************/
-.tab-pane > *.tab-header-area > *.tab-header-background{
-    -fx-background-color: rgb(240,240,240);
-}
-
 .tab-pane:top > .tab-content-area {
     -fx-background-color: rgb(255,255,255);
     -fx-border-color: rgb(137,140,149);
 }
 
-.tab-pane:top > .tab-header-area > .headers-region > .tab:top{
+.tab-pane > *.tab-header-area {
+    -fx-translate-x: -5px;
+}
+
+.tab-pane > *.tab-header-area > *.tab-header-background{
+    -fx-background-color: rgb(240,240,240);
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab{
+    -fx-border-color: rgb(137,140,149);
+    -fx-background-color:
+        rgb(255,255,255),
+        linear-gradient(to bottom, rgb(242,242,242) 0%, rgb(235,235,235) 49%, rgb(221,221,221) 50%, rgb(207,207,207) 100%);
+    -fx-background-insets: 0,2 2 0 2;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab:top{
     -fx-border-color: rgb(244,0,0), rgb(137,140,149), rgb(137,140,149), rgb(137,140,149);
-    -fx-border-size:5;
-    -fx-pref-height: 1.63em;
+    -fx-border-width: 1 1 0 1;
+    -fx-pref-height: 1.7em;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab:selected{
+     -fx-background-color: rgb(255,255,255);
+     -fx-pref-height: 1.9em;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab:selected .focus-indicator{
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
 }
