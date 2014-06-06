@@ -37,7 +37,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="408.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aerofx_project.demo.SystemSettingsDemoController">
    <children>
-      <TabPane layoutX="11.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="405.0" prefWidth="390.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutX="6.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="405.0" prefWidth="390.0" tabClosingPolicy="UNAVAILABLE">
          <tabs>
             <Tab text="Computername">
                <content>
@@ -49,14 +49,14 @@
                            </font>
                         </Label>
                         <Label layoutX="14.0" layoutY="65.0" text="Computerbeschreibung:" />
-                        <TextField layoutX="165.0" layoutY="61.0" prefHeight="25.0" prefWidth="202.0" />
+                        <TextField layoutX="165.0" layoutY="61.0" prefHeight="20.0" prefWidth="202.0" />
                         <Label layoutX="183.0" layoutY="115.0" text="Zum Beispiel: &quot;Spielecomputer&quot; oder &#10;&quot;Heikes Computer&quot;" />
                         <Label layoutX="14.0" layoutY="167.0" text="Vollständiger Computername:" />
                         <Label layoutX="183.0" layoutY="167.0" text="Home-PC" />
                         <Label layoutX="14.0" layoutY="196.0" text="Arbeitsgruppe" />
                         <Label layoutX="183.0" layoutY="196.0" text="WORKGROUP" />
                         <Label layoutX="14.0" layoutY="247.0" text="Klicken Sie auf &quot;Netzwerk-ID&quot;, um einer Domäne&#10;oder einer Arbeitsgruppe mithilfe eines Assistenten&#10;beizutreten." />
-                        <Button layoutX="293.0" layoutY="250.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="98.0" text="Netzwerk-ID..." />
+                        <Button layoutX="293.0" layoutY="250.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="88.0" text="Netzwerk-ID..." />
                         <Label layoutX="14.0" layoutY="326.0" text="Klicken Sie auf &quot;Ändern&quot;, um diesen Computer&#10;umzubennen oder dessen Domäne oder&#10;Arbeitsgruppe zu ändern." />
                         <Button layoutX="297.0" layoutY="339.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" text="Ändern..." />
                      </children>

@@ -40,7 +40,7 @@
 }
 
 .text{
-    -fx-font-smoothing-type: lcd;
+    /*-fx-font-smoothing-type: lcd;*/
 }
 
 
@@ -51,9 +51,9 @@
 *********************************************/
 .button{
     -fx-background-color:
-        rgb(112,112,112)
+        rgb(112,112,112),
         linear-gradient(rgb(252,252,252), rgb(252,252,252)),
-        linear-gradient(rgb(242,242,242) 0%, rgb(235,235,235) 45%, rgb(221,221,221) 55%, rgb(207,207,207) 100%);
+        linear-gradient(rgb(242,242,242) 0%, rgb(235,235,235) 49%, rgb(221,221,221) 50%, rgb(207,207,207) 100%);
     -fx-background-insets: 0,1,2;
     -fx-background-radius: 3,2,1;
     -fx-padding: 3 3 3 3;
@@ -63,21 +63,21 @@
     -fx-background-color:
         rgb(60,127,177),
         linear-gradient(rgb(250,253,254),rgb(250,253,254)),
-        linear-gradient(rgb(234, 246, 253) 0%, rgb(217, 240, 252) 45%, rgb(190, 230, 253) 55%, rgb(167, 217, 245) 100%);
+        linear-gradient(rgb(234, 246, 253) 0%, rgb(217, 240, 252) 49%, rgb(190, 230, 253) 50%, rgb(167, 217, 245) 100%);
 }
 
 .button:default{
     -fx-background-color:
         rgb(60,127,177),
         linear-gradient(rgb(47,212,255), rgb(47,212,255)),
-        linear-gradient(rgb(234,246,252) 0%, rgb(228,243,252) 45%, rgb(202,233,250) 55%, rgb(182,222,245) 100%);
+        linear-gradient(rgb(234,246,252) 0%, rgb(228,243,252) 49%, rgb(202,233,250) 50%, rgb(182,222,245) 100%);
 }
 
 .button:armed{
     -fx-background-color:
         rgb(44,98,139),
         linear-gradient(rgb(158,176,186), rgb(158,176,186)),
-        linear-gradient(rgb(229,244,252) 0%, rgb(196,229,246) 45%, rgb(152,209,239) 55%, rgb(104,179,219) 100%);
+        linear-gradient(rgb(229,244,252) 0%, rgb(196,229,246) 49%, rgb(152,209,239) 50%, rgb(104,179,219) 100%);
 }
 
 
@@ -90,9 +90,10 @@
    /* If four values are used, the sides are top, right, bottom, left. */
    -fx-border-color: rgb(170,170,178) rgb(218,220,230) rgb(226,231.0,239) rgb(226,224,234);
    -fx-background-color: rgb(255,255,255);
-   -fx-padding: 0.2em;
+   -fx-padding: 0.0em;
    -fx-cursor: text;
    -fx-effect: null;
+   -fx-pref-height: 20px;
 }
 .text-field:focused{
     -fx-border-color: rgb(61,123,173) rgb(164,201,227) rgb(183,217,237) rgb(181,207,231);
