@@ -35,9 +35,9 @@
   ~ either expressed or implied, of the FreeBSD Project.
   -->
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="408.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aerofx_project.demo.SystemSettingsDemoController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="408.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aerofx_project.demo.SystemSettingsDemoController">
    <children>
-      <TabPane layoutX="6.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="405.0" prefWidth="390.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutX="6.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="399.0" tabClosingPolicy="UNAVAILABLE">
          <tabs>
             <Tab text="Computername">
                <content>
@@ -58,7 +58,7 @@
                         <Label layoutX="14.0" layoutY="247.0" text="Klicken Sie auf &quot;Netzwerk-ID&quot;, um einer Domäne&#10;oder einer Arbeitsgruppe mithilfe eines Assistenten&#10;beizutreten." />
                         <Button layoutX="293.0" layoutY="250.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="88.0" text="Netzwerk-ID..." />
                         <Label layoutX="14.0" layoutY="326.0" text="Klicken Sie auf &quot;Ändern&quot;, um diesen Computer&#10;umzubennen oder dessen Domäne oder&#10;Arbeitsgruppe zu ändern." />
-                        <Button layoutX="297.0" layoutY="339.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" text="Ändern..." />
+                        <Button layoutX="293.0" layoutY="300.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="88.0" text="Ändern..." />
                      </children>
                   </AnchorPane>
                </content>
@@ -136,34 +136,35 @@
             </Tab>
             <Tab text="Remote">
                <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="392.0" prefWidth="390.0">
                      <children>
                         <Label layoutX="29.0" layoutY="14.0" text="Remoteunterstützung" />
                         <CheckBox layoutX="29.0" layoutY="53.0" mnemonicParsing="false" text="Remoteunterstützungsverbindungen mit diesem Computer zulassen" />
                         <Label layoutX="29.0" layoutY="172.0" text="Klicken Sie auf eine Option und geben Sie ggf. anschließen an, wer&#10;eine Verbindung herstellen darf." />
                         <Label layoutX="29.0" layoutY="140.0" text="Remotedesktop" />
-                        <Label layoutX="39.0" layoutY="96.0" text="&lt;a&gt;Was geschieht, wenn Remoteunterstützung aktiviert&#10;ist?&lt;/a&gt;" />
-                        <RadioButton layoutX="29.0" layoutY="238.0" mnemonicParsing="false" selected="true" text="Keine Verbindung mit diesem Computer zulassen">
+                        <RadioButton layoutX="22.0" layoutY="216.0" mnemonicParsing="false" selected="true" text="Keine Verbindung mit diesem Computer zulassen">
                            <toggleGroup>
                               <ToggleGroup fx:id="Select1" />
                            </toggleGroup>
                         </RadioButton>
-                        <RadioButton layoutX="29.0" layoutY="275.0" mnemonicParsing="false" text="Verbindungen von Computern zulassen, auf denen eine beliebige&#10;Version von Remotedesktop ausgeführt wird (weniger Sicherheit)" toggleGroup="$Select1" />
-                        <RadioButton layoutX="29.0" layoutY="329.0" mnemonicParsing="false" text="Verbindungen nur von Computern zulassen, auf denen Remotedesktop&#10;mit Authentifizierung auf Netzwerkebene ausgeführt wird (höhere&#10;Sicherheit)" toggleGroup="$Select1" />
-                        <Label layoutX="29.0" layoutY="391.0" text="&lt;a&gt;Entscheidungshilfe&lt;/a&gt;" />
-                        <Button layoutX="266.0" layoutY="379.0" mnemonicParsing="false" text="Benutzer auswählen..." />
+                        <RadioButton layoutX="22.0" layoutY="239.0" mnemonicParsing="false" text="Verbindungen von Computern zulassen, auf denen eine beliebige&#10;Version von Remotedesktop ausgeführt wird (weniger Sicherheit)" toggleGroup="$Select1" />
+                        <RadioButton layoutX="22.0" layoutY="280.0" mnemonicParsing="false" text="Verbindungen nur von Computern zulassen, auf denen Remotedesktop&#10;mit Authentifizierung auf Netzwerkebene ausgeführt wird (höhere&#10;Sicherheit)" toggleGroup="$Select1" />
+                        <Button layoutX="259.0" layoutY="336.0" mnemonicParsing="false" text="Benutzer auswählen..." />
                         <Separator layoutX="178.0" layoutY="21.0" prefWidth="200.0" />
                         <Separator layoutX="166.0" layoutY="147.0" prefWidth="200.0" />
                         <Separator layoutX="16.0" layoutY="132.0" prefHeight="0.0" prefWidth="399.0" />
                         <Separator layoutX="16.0" layoutY="420.0" prefHeight="0.0" prefWidth="409.0" />
+                        <Hyperlink layoutX="28.0" layoutY="92.0" text="Was geschieht, wenn Remoteunterstützung aktiviert&#10;ist?" underline="true" />
+                        <Hyperlink layoutX="28.0" layoutY="337.0" text="Entscheidungshilfe" underline="true" />
+                        <Button layoutX="298.0" layoutY="100.0" mnemonicParsing="false" text="Erweitert" />
                      </children>
                   </AnchorPane>
                </content>
             </Tab>
          </tabs>
       </TabPane>
-      <Button layoutX="169.0" layoutY="420.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="73.0" text="OK" />
-      <Button layoutX="251.0" layoutY="420.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="73.0" text="Abbrechen" />
-      <Button layoutX="331.0" layoutY="420.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="73.0" text="Übernehmen" />
+      <Button layoutX="171.0" layoutY="427.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="73.0" text="OK" />
+      <Button layoutX="252.0" layoutY="427.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="73.0" text="Abbrechen" />
+      <Button layoutX="333.0" layoutY="427.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="73.0" text="Übernehmen" />
    </children>
 </AnchorPane>
