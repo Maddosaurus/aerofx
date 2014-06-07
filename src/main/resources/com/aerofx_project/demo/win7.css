@@ -32,7 +32,7 @@
     -fx-text-fill: -fx-text-base-color;
 
     /* This is the default Windows-font */
-    -fx-font-family: "Segoe UI";
+    -fx-font-family: "Segoe UI Semibold";
     -fx-font-size: 10.5;
 
     /* For debugging purposes*/
@@ -40,7 +40,7 @@
 }
 
 .text{
-    /*-fx-font-smoothing-type: lcd;*/
+    -fx-font-smoothing-type: lcd;
 }
 
 

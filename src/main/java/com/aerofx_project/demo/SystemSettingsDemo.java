@@ -34,6 +34,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.scenicview.ScenicView;
 
 /**
  * Created by Matthias on 27.05.2014.
@@ -54,5 +55,6 @@ public class SystemSettingsDemo extends Application {
         primaryStage.setScene(myScene);
 
         primaryStage.show();
+//        ScenicView.show(myScene);
     }
 }
