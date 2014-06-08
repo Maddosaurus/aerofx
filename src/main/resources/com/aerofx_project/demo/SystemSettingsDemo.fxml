@@ -48,17 +48,17 @@
                               <Font size="11.0" />
                            </font>
                         </Label>
-                        <Label layoutX="14.0" layoutY="65.0" text="Computerbeschreibung:" />
-                        <TextField layoutX="165.0" layoutY="61.0" prefHeight="20.0" prefWidth="202.0" />
-                        <Label layoutX="183.0" layoutY="115.0" text="Zum Beispiel: &quot;Spielecomputer&quot; oder &#10;&quot;Heikes Computer&quot;" />
-                        <Label layoutX="14.0" layoutY="167.0" text="Vollständiger Computername:" />
-                        <Label layoutX="183.0" layoutY="167.0" text="Home-PC" />
-                        <Label layoutX="14.0" layoutY="196.0" text="Arbeitsgruppe" />
-                        <Label layoutX="183.0" layoutY="196.0" text="WORKGROUP" />
-                        <Label layoutX="14.0" layoutY="247.0" text="Klicken Sie auf &quot;Netzwerk-ID&quot;, um einer Domäne&#10;oder einer Arbeitsgruppe mithilfe eines Assistenten&#10;beizutreten." />
-                        <Button layoutX="293.0" layoutY="250.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="88.0" text="Netzwerk-ID..." />
-                        <Label layoutX="14.0" layoutY="326.0" text="Klicken Sie auf &quot;Ändern&quot;, um diesen Computer&#10;umzubennen oder dessen Domäne oder&#10;Arbeitsgruppe zu ändern." />
-                        <Button layoutX="293.0" layoutY="300.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="88.0" text="Ändern..." />
+                        <Label layoutX="14.0" layoutY="57.0" text="Computerbeschreibung:" />
+                        <TextField layoutX="165.0" layoutY="54.0" prefHeight="20.0" prefWidth="202.0" />
+                        <Label layoutX="165.0" layoutY="80.0" text="Zum Beispiel: &quot;Spielecomputer&quot; oder &#10;&quot;Heikes Computer&quot;" />
+                        <Label layoutX="14.0" layoutY="114.0" text="Vollständiger Computername:" />
+                        <Label layoutX="165.0" layoutY="114.0" text="Home-PC" />
+                        <Label layoutX="14.0" layoutY="140.0" text="Arbeitsgruppe:" />
+                        <Label layoutX="165.0" layoutY="140.0" text="WORKGROUP" />
+                        <Label layoutX="14.0" layoutY="165.0" text="Klicken Sie auf &quot;Netzwerk-ID&quot;, um einer Domäne&#10;oder einer Arbeitsgruppe mithilfe eines Assistenten&#10;beizutreten." />
+                        <Button layoutX="293.0" layoutY="170.0" prefHeight="21.0" prefWidth="88.0" text="Netzwer_k-ID..." />
+                        <Label layoutX="14.0" layoutY="215.0" text="Klicken Sie auf &quot;Ändern&quot;, um diesen Computer&#10;umzubennen oder dessen Domäne oder&#10;Arbeitsgruppe zu ändern." />
+                        <Button layoutX="293.0" layoutY="215.0" prefHeight="21.0" prefWidth="88.0" text="Ä_ndern..." />
                      </children>
                   </AnchorPane>
                </content>
@@ -67,16 +67,16 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Separator layoutX="129.0" layoutY="35.0" prefWidth="200.0" />
-                        <Label layoutX="17.0" layoutY="29.0" text="Geräte-Manager" />
-                        <Label layoutX="61.0" layoutY="58.0" text="Der Geräte-Manager listet alle auf dem Computer installierten&#10;Hardwaregeräte auf. Verwenden Sie den Geräte-Manager, um&#10;die Eigenschaften eines Gerätes zu ändern" />
-                        <Label layoutX="61.0" layoutY="233.0" text="Wählen Sie aus, ob für Ihre Geräte Treibersoftware und&#10;detaillierte Informationen heruntergeladen werden sollen." />
-                        <Label layoutX="17.0" layoutY="193.0" text="Geräteinstallationseinstellungen" />
-                        <Separator layoutX="218.0" layoutY="202.0" prefHeight="0.0" prefWidth="111.0" />
-                        <Button layoutX="168.0" layoutY="137.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="214.0" text="Geräte-Manager" />
-                        <Button layoutX="168.0" layoutY="288.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="214.0" text="Geräteinstallationseinstellungen" />
-                        <Separator layoutX="17.0" layoutY="171.0" prefHeight="0.0" prefWidth="399.0" />
-                        <Separator layoutX="11.0" layoutY="322.0" prefHeight="0.0" prefWidth="399.0" />
+                        <Label layoutX="17.0" layoutY="20.0" text="Geräte-Manager" />
+                         <Separator layoutX="129.0" layoutY="28.0" prefWidth="200.0" />
+                         <Label layoutX="61.0" layoutY="40.0" text="Der Geräte-Manager listet alle auf dem Computer installierten&#10;Hardwaregeräte auf. Verwenden Sie den Geräte-Manager, um&#10;die Eigenschaften eines Gerätes zu ändern" />
+                         <Button layoutX="152.0" layoutY="101.0" prefHeight="21.0" prefWidth="214.0" text="_Geräte-Manager" />
+                         <Separator layoutX="17.0" layoutY="134.0" prefHeight="0.0" prefWidth="399.0" />
+                         <Label layoutX="17.0" layoutY="141.0" text="Geräteinstallationseinstellungen" />
+                         <Separator layoutX="218.0" layoutY="149.0" prefHeight="0.0" prefWidth="111.0" />
+                         <Label layoutX="61.0" layoutY="169.0" text="Wählen Sie aus, ob für Ihre Geräte Treibersoftware und&#10;detaillierte Informationen heruntergeladen werden sollen." />
+                         <Button layoutX="152.0" layoutY="215.0" prefHeight="21.0" prefWidth="214.0" text="Gerä_teinstallationseinstellungen" />
+                         <Separator layoutX="11.0" layoutY="247.0" prefHeight="0.0" prefWidth="399.0" />
                      </children>
                   </AnchorPane>
                </content>
@@ -93,12 +93,12 @@
                         <Separator layoutX="193.0" layoutY="253.0" prefWidth="200.0" />
                         <Label layoutX="26.0" layoutY="246.0" text="Leistung" />
                         <Label layoutX="26.0" layoutY="74.0" text="Visuelle Effekte, Prozessorzeitplanung, Speichernutzung und virtueller&#10;Speicher" />
-                        <Button layoutX="285.0" layoutY="108.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="102.0" text="Einstellungen" />
-                        <Button layoutX="285.0" layoutY="199.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="102.0" text="Einstellungen" />
+                        <Button layoutX="284.0" layoutY="90.0" prefHeight="21.0" prefWidth="82.0" text="_Einstellungen" />
+                        <Button layoutX="284.0" layoutY="182.0" prefHeight="21.0" prefWidth="82.0" text="E_instellungen" />
                         <Label layoutX="26.0" layoutY="165.0" text="Desktopeinstellungen bezüglich der Anmeldung" />
-                        <Button layoutX="285.0" layoutY="297.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="102.0" text="Einstellungen" />
+                        <Button layoutX="284.0" layoutY="275.0" prefHeight="21.0" prefWidth="82.0" text="Ei_nstellungen" />
                         <Label layoutX="26.0" layoutY="263.0" text="Systemstart, Systemfehler und Debuginformationen" />
-                        <Button layoutX="234.0" layoutY="342.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="153.0" text="Umgebungsvariablen" />
+                        <Button layoutX="251.0" layoutY="321.0" prefHeight="21.0" prefWidth="126.0" text="_Umgebungsvariablen" />
                         <Separator layoutX="10.0" layoutY="139.0" prefHeight="0.0" prefWidth="399.0" />
                         <Separator layoutX="11.0" layoutY="235.0" prefHeight="0.0" prefWidth="399.0" />
                         <Separator layoutX="10.0" layoutY="330.0" prefHeight="0.0" prefWidth="399.0" />
@@ -119,11 +119,11 @@
                               <Font size="11.0" />
                            </font></Label>
                         <Label layoutX="17.0" layoutY="340.0" text="Dient zum sofortigen Erstellen eines&#10;Wiederherstellungspunktes für die Laufwerke mit&#10;aktiviertem Systemschutz" />
-                        <Button layoutX="276.0" layoutY="305.0" mnemonicParsing="false" text="Konfigurieren..." />
-                        <Button layoutX="288.0" layoutY="353.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Erstellen..." />
+                        <Button layoutX="276.0" layoutY="305.0" prefHeight="21.0" prefWidth="103.0" text="K_onfigurieren..." />
+                        <Button layoutX="276.0" layoutY="353.0" prefHeight="21.0" prefWidth="103.0" text="_Erstellen..." />
                         <Separator layoutX="167.0" layoutY="89.0" prefWidth="200.0" />
                         <Separator layoutX="172.0" layoutY="207.0" prefWidth="200.0" />
-                        <Button layoutX="254.0" layoutY="106.0" mnemonicParsing="false" text="Systemwiederherstellung..." />
+                        <Button layoutX="254.0" layoutY="106.0" prefHeight="21.0" prefWidth="138.0" text="_Systemwiederherstellung..." />
                         <TableView layoutX="30.0" layoutY="217.0" prefHeight="74.0" prefWidth="358.0">
                           <columns>
                             <TableColumn prefWidth="229.0" text="Verfügbare Laufwerke" />
@@ -149,14 +149,14 @@
                         </RadioButton>
                         <RadioButton layoutX="22.0" layoutY="239.0" mnemonicParsing="false" text="Verbindungen von Computern zulassen, auf denen eine beliebige&#10;Version von Remotedesktop ausgeführt wird (weniger Sicherheit)" toggleGroup="$Select1" />
                         <RadioButton layoutX="22.0" layoutY="280.0" mnemonicParsing="false" text="Verbindungen nur von Computern zulassen, auf denen Remotedesktop&#10;mit Authentifizierung auf Netzwerkebene ausgeführt wird (höhere&#10;Sicherheit)" toggleGroup="$Select1" />
-                        <Button layoutX="259.0" layoutY="336.0" mnemonicParsing="false" text="Benutzer auswählen..." />
+                        <Button layoutX="259.0" layoutY="336.0" prefHeight="21.0" prefWidth="133.0" text="Benutzer a_uswählen..." />
                         <Separator layoutX="178.0" layoutY="21.0" prefWidth="200.0" />
                         <Separator layoutX="166.0" layoutY="147.0" prefWidth="200.0" />
                         <Separator layoutX="16.0" layoutY="132.0" prefHeight="0.0" prefWidth="399.0" />
                         <Separator layoutX="16.0" layoutY="420.0" prefHeight="0.0" prefWidth="409.0" />
                         <Hyperlink layoutX="28.0" layoutY="92.0" text="Was geschieht, wenn Remoteunterstützung aktiviert&#10;ist?" underline="true" />
                         <Hyperlink layoutX="28.0" layoutY="337.0" text="Entscheidungshilfe" underline="true" />
-                        <Button layoutX="298.0" layoutY="100.0" mnemonicParsing="false" text="Erweitert" />
+                        <Button layoutX="298.0" layoutY="100.0" prefHeight="21.0" prefWidth="91.0" text="_Erweitert" />
                      </children>
                   </AnchorPane>
                </content>
