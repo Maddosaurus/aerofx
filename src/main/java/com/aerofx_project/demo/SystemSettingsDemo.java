@@ -51,7 +51,7 @@ public class SystemSettingsDemo extends Application {
         primaryStage.setTitle("Systemeigenschaften");
         primaryStage.setResizable(false);
         Scene myScene = new Scene(root, 403, 446);
-        myScene.getStylesheets().add(getClass().getResource("win7.css").toExternalForm());
+        myScene.getStylesheets().add(getClass().getResource("../win7.css").toExternalForm());
         primaryStage.setScene(myScene);
 
         primaryStage.show();

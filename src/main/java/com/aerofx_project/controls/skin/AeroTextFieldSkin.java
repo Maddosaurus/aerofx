@@ -27,15 +27,17 @@
  * either expressed or implied, of the FreeBSD Project.
  */
 
-package com.aerofx_project;
+package com.aerofx_project.controls.skin;
+
+import com.sun.javafx.scene.control.skin.TextFieldSkin;
+import javafx.scene.control.TextField;
 
 /**
- * Created by Matthias on 27.05.2014.
+ * Created by Matthias on 10.06.2014.
  */
-public class AeroFX {
-    private final String AERO_CSS_NAME = AeroFX.class.getResource("win7.css").toExternalForm();
+public class AeroTextFieldSkin extends TextFieldSkin implements AeroSkin {
 
-    public static void style(){
-        //Not implemented
+    public AeroTextFieldSkin(TextField textField) {
+        super(textField);
     }
 }

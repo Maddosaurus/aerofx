@@ -35,7 +35,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="25.0" layoutY="23.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="25.0" layoutY="23.0" prefHeight="21.0" prefWidth="60.0" mnemonicParsing="false" text="Button" />
       <Label layoutX="25.0" layoutY="63.0" text="Just some Text" />
       <TextField layoutX="25.0" layoutY="88.0" />
       <CheckBox layoutX="193.0" layoutY="26.0" mnemonicParsing="false" text="CheckBox" />

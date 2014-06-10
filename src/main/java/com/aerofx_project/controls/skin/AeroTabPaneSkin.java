@@ -27,15 +27,16 @@
  * either expressed or implied, of the FreeBSD Project.
  */
 
-package com.aerofx_project;
+package com.aerofx_project.controls.skin;
+
+import com.sun.javafx.scene.control.skin.TabPaneSkin;
+import javafx.scene.control.TabPane;
 
 /**
- * Created by Matthias on 27.05.2014.
+ * Created by Matthias on 10.06.2014.
  */
-public class AeroFX {
-    private final String AERO_CSS_NAME = AeroFX.class.getResource("win7.css").toExternalForm();
-
-    public static void style(){
-        //Not implemented
+public class AeroTabPaneSkin extends TabPaneSkin implements AeroSkin {
+    public AeroTabPaneSkin(TabPane tabPane) {
+        super(tabPane);
     }
 }
