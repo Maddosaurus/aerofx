@@ -113,27 +113,33 @@ public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
                         List<BackgroundFill> list = new ArrayList<>();
 
                         Stop[] stops = new Stop[] { new Stop(0f, Color.color(
-                                (endColor1.getRed() - startColor1.getRed()) * newValue.doubleValue() + startColor1.getRed(),
+                                (endColor1.getRed()   - startColor1.getRed())   * newValue.doubleValue() + startColor1.getRed(),
                                 (endColor1.getGreen() - startColor1.getGreen()) * newValue.doubleValue() + startColor1.getGreen(),
-                                (endColor1.getBlue() - startColor1.getBlue()) * newValue.doubleValue() + startColor1.getBlue())),
+                                (endColor1.getBlue()  - startColor1.getBlue())  * newValue.doubleValue() + startColor1.getBlue())),
                         new Stop(0.49f, Color.color(
-                                (endColor2.getRed() - startColor2.getRed()) * newValue.doubleValue() + startColor2.getRed(),
+                                (endColor2.getRed()   - startColor2.getRed())   * newValue.doubleValue() + startColor2.getRed(),
                                 (endColor2.getGreen() - startColor2.getGreen()) * newValue.doubleValue() + startColor2.getGreen(),
-                                (endColor2.getBlue() - startColor2.getBlue()) * newValue.doubleValue() + startColor2.getBlue())),
+                                (endColor2.getBlue()  - startColor2.getBlue())  * newValue.doubleValue() + startColor2.getBlue())),
                         new Stop(0.5f, Color.color(
-                                (endColor3.getRed() - startColor3.getRed()) * newValue.doubleValue() + startColor3.getRed(),
+                                (endColor3.getRed()   - startColor3.getRed())   * newValue.doubleValue() + startColor3.getRed(),
                                 (endColor3.getGreen() - startColor3.getGreen()) * newValue.doubleValue() + startColor3.getGreen(),
-                                (endColor3.getBlue() - startColor3.getBlue()) * newValue.doubleValue() + startColor3.getBlue())),
+                                (endColor3.getBlue()  - startColor3.getBlue())  * newValue.doubleValue() + startColor3.getBlue())),
                         new Stop(1f, Color.color(
-                                (endColor4.getRed() - startColor4.getRed()) * newValue.doubleValue() + startColor4.getRed(),
+                                (endColor4.getRed()   - startColor4.getRed())   * newValue.doubleValue() + startColor4.getRed(),
                                 (endColor4.getGreen() - startColor4.getGreen()) * newValue.doubleValue() + startColor4.getGreen(),
-                                (endColor4.getBlue() - startColor4.getBlue()) * newValue.doubleValue() + startColor4.getBlue())) };
+                                (endColor4.getBlue()  - startColor4.getBlue())  * newValue.doubleValue() + startColor4.getBlue())) };
 
+                        //Build up rectangles
+                        BackgroundFill f1 = new BackgroundFill(Color.rgb(60, 127, 177), new CornerRadii(3.0), new Insets(0.0));
+                        list.add(f1);
+                        BackgroundFill f2 = new BackgroundFill(Color.rgb(72,216,251), new CornerRadii(2.0), new Insets(1.0));
+                        list.add(f2);
                         LinearGradient gradient = new LinearGradient(0.0,0.0,0.0,1.0,true, CycleMethod.NO_CYCLE,stops);
                         BackgroundFill bgFill = new BackgroundFill(gradient, new CornerRadii(1.0), new Insets(2.0));
                         list.add(bgFill);
 
-                        getSkinnable().setBackground(new Background(list.get(0)));
+                        getSkinnable().setBackground(new Background(list.get(0), list.get(1), list.get(2)));
+
                     }
                 });
 
