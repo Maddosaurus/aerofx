@@ -60,10 +60,9 @@ public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
 
     private Rectangle focusBorderRect;
 
-    private InvalidationListener focusBorderListener;
-
-    private InvalidationListener focusAnimationListener;
     private BindableTransition focusedButtonTransition;
+
+    private ChangeListener<Boolean> focusTabListener;
 
     public AeroButtonSkin(Button button) {
         super(button);
@@ -71,9 +70,20 @@ public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
         getChildren().add(focusBorderRect);
         focusBorderRect.setVisible(false);
         focusBorderRect.getStyleClass().add("button-focus-border");
-        focusBorderListener = (e) -> focusBorderRect.setVisible(getSkinnable().isFocused());
-//        setFocusedButtonAnimation();
-        getSkinnable().focusedProperty().addListener(focusBorderListener);
+        setFocusedButtonAnimation();
+
+        focusTabListener = new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                focusBorderRect.setVisible(newValue);
+
+                if(newValue)
+                    focusedButtonTransition.play();
+                else
+                    focusedButtonTransition.stop();
+            }
+        };
+        getSkinnable().focusedProperty().addListener(focusTabListener);
     }
 
     @Override
@@ -142,15 +152,13 @@ public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
 
                     }
                 });
-
-                focusedButtonTransition.play();
             }
         }
     }
 
     public void dispose() {
         super.dispose();
-        getSkinnable().focusedProperty().removeListener(focusBorderListener);
+        getSkinnable().focusedProperty().removeListener(focusTabListener);
     }
 
 
