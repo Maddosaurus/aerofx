@@ -27,34 +27,35 @@
  * either expressed or implied, of the FreeBSD Project.
  */
 
-package com.aerofx_project.demo;
+package com.aerofx_project.controls.skin;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import org.scenicview.ScenicView;
+import javafx.scene.control.Label;
+import javafx.scene.layout.StackPane;
 
 /**
- * Created by Matthias on 27.05.2014.
+ * Created by Shivy on 12.06.2014.
  */
-public class SystemSettingsDemo extends Application {
-    /**
-     *
-     * @param primaryStage  The primary Stage
-     * @throws Exception
-     */
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("SystemSettingsDemo.fxml"));
-        primaryStage.setTitle("Systemeigenschaften");
-        primaryStage.setResizable(false);
-        Scene myScene = new Scene(root, 403, 446);
-        myScene.getStylesheets().add(getClass().getResource("../win7.css").toExternalForm());
-        primaryStage.setScene(myScene);
+public class AeroGroupBoxSkin extends StackPane implements AeroSkin{
+    private Label titleLabel;
 
-        primaryStage.show();
-        ScenicView.show(myScene);
+    public AeroGroupBoxSkin(){
+        super();
+        getStyleClass().add("group-box");
+        titleLabel = new Label("The Title!");
+        getChildren().add(titleLabel);
+    }
+
+    public AeroGroupBoxSkin(String boxTitle){
+        super();
+        getStyleClass().add("group-box");
+        titleLabel = new Label(boxTitle);
+        getChildren().add(titleLabel);
+    }
+
+    @Override
+    protected void layoutChildren() {
+        super.layoutChildren();
+        titleLabel.setLayoutX(5);
+        titleLabel.setLayoutY(-8);
     }
 }

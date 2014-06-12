@@ -32,7 +32,6 @@ package com.aerofx_project.controls.skin;
 import com.sun.javafx.scene.control.skin.ButtonSkin;
 import javafx.animation.Animation;
 import javafx.animation.Timeline;
-import javafx.beans.InvalidationListener;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.geometry.Insets;

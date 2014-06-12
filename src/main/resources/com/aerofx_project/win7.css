@@ -293,3 +293,14 @@
     -fx-border-color: black;
     -fx-border-style: dotted;
 }
+
+
+/********************************************
+*                                           *
+*       GroupBox                            *
+*                                           *
+*********************************************/
+.group-box{
+    -fx-border-color: green;
+    -fx-border-radius: 3;
+}

@@ -64,7 +64,7 @@ public class AeroRadioButtonSkin extends RadioButtonSkin implements AeroSkin {
         focusBorderRect.getStyleClass().add("radio-button-focus-border");
         focusBorderListener = (e) -> focusBorderRect.setVisible(getSkinnable().isFocused());
         getSkinnable().focusedProperty().addListener(focusBorderListener);
-//        System.out.println(getSkinnable().getToggleGroup().getToggles());
+
     }
 //    public void test() {
 //        getSkinnable().getToggleGroup().selectedToggleProperty().addListener((e) ());

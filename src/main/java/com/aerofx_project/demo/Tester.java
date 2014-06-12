@@ -47,7 +47,6 @@ public class Tester extends Application {
         Scene myScene = new Scene(root, 300, 200);
         myScene.getStylesheets().add(getClass().getResource("../win7.css").toExternalForm());
         primaryStage.setScene(myScene);
-
         primaryStage.show();
     }
     public static void main(String[] args) {
