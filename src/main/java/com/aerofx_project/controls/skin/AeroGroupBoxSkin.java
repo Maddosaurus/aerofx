@@ -29,27 +29,30 @@
 
 package com.aerofx_project.controls.skin;
 
+import javafx.application.Application;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
+import javafx.scene.shape.Rectangle;
+
 
 /**
  * Created by Shivy on 12.06.2014.
  */
 public class AeroGroupBoxSkin extends StackPane implements AeroSkin{
     private Label titleLabel;
+    private Rectangle clipRect;
+
+    public final String getTitle(){return titleLabel.getText();}
+    public final void setTitle(String value){titleLabel.setText(value);}
 
     public AeroGroupBoxSkin(){
         super();
         getStyleClass().add("group-box");
-        titleLabel = new Label("The Title!");
+        titleLabel = new Label("");
         getChildren().add(titleLabel);
-    }
-
-    public AeroGroupBoxSkin(String boxTitle){
-        super();
-        getStyleClass().add("group-box");
-        titleLabel = new Label(boxTitle);
-        getChildren().add(titleLabel);
+        clipRect = new Rectangle();
     }
 
     @Override
@@ -57,5 +60,9 @@ public class AeroGroupBoxSkin extends StackPane implements AeroSkin{
         super.layoutChildren();
         titleLabel.setLayoutX(5);
         titleLabel.setLayoutY(-8);
+        clipRect.setX(titleLabel.getLayoutX());
+        clipRect.setY(titleLabel.getLayoutY());
+        clipRect.setWidth(titleLabel.getWidth());
+        clipRect.setHeight(titleLabel.getHeight());
     }
 }
