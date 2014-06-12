@@ -119,15 +119,17 @@
 *       CheckBox                            *
 *                                           *
 *********************************************/
+.check-box-focus-border{
+    -fx-stroke: black;
+    -fx-stroke-dash-array: 1;
+    -fx-stroke-width: 1px;
+    -fx-stroke-line-cap: butt;
+    -fx-stroke-type: inside;
+}
 /* TODO: Style the mark by using a fx-shape */
 .check-box{
     -fx-skin:"com.aerofx_project.controls.skin.AeroCheckBoxSkin";
     -fx-label-padding: 0.0em 0.0em 0.0em 0.05em;
-}
-
-.check-box:focused{
-    -fx-border-color: black;
-    -fx-border-style: dotted;
 }
 
 .check-box > .box{
@@ -168,14 +170,17 @@
 *       RadioButton                         *
 *                                           *
 *********************************************/
+.radio-button-focus-border{
+    -fx-stroke: black;
+    -fx-stroke-dash-array: 1;
+    -fx-stroke-width: 1px;
+    -fx-stroke-line-cap: butt;
+    -fx-stroke-type: inside;
+}
+
 .radio-button{
     -fx-skin:"com.aerofx_project.controls.skin.AeroRadioButtonSkin";
     -fx-label-padding: 0.0em 0.0em 0.0em 0.35em;
-}
-
-.radio-button:focused{
-    -fx-border-color: black;
-    -fx-border-style: dotted;
 }
 
 .radio-button > .radio{

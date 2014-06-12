@@ -72,16 +72,13 @@ public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
         focusBorderRect.getStyleClass().add("button-focus-border");
         setFocusedButtonAnimation();
 
-        focusTabListener = new ChangeListener<Boolean>() {
-            @Override
-            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                focusBorderRect.setVisible(newValue);
+        focusTabListener = (observable, oldValue, newValue) -> {
+            focusBorderRect.setVisible(newValue);
 
-                if(newValue)
-                    focusedButtonTransition.play();
-                else
-                    focusedButtonTransition.stop();
-            }
+            if(newValue)
+                focusedButtonTransition.play();
+            else
+                focusedButtonTransition.stop();
         };
         getSkinnable().focusedProperty().addListener(focusTabListener);
     }
@@ -149,7 +146,6 @@ public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
                         list.add(bgFill);
 
                         getSkinnable().setBackground(new Background(list.get(0), list.get(1), list.get(2)));
-
                     }
                 });
             }

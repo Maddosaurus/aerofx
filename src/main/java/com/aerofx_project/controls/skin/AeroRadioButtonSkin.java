@@ -29,8 +29,16 @@
 
 package com.aerofx_project.controls.skin;
 
+import com.sun.javafx.scene.control.skin.LabeledText;
 import com.sun.javafx.scene.control.skin.RadioButtonSkin;
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
+import javafx.event.EventHandler;
+import javafx.scene.Node;
 import javafx.scene.control.RadioButton;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 
 /**
  * Created by Matthias on 10.06.2014.
@@ -45,10 +53,19 @@ public class AeroRadioButtonSkin extends RadioButtonSkin implements AeroSkin {
      *
      * @param radioButton
      */
+    private Rectangle focusBorderRect;
+    private InvalidationListener focusBorderListener;
+
     public AeroRadioButtonSkin(RadioButton radioButton) {
         super(radioButton);
+        focusBorderRect = new Rectangle(0, 0, Color.TRANSPARENT);
+        getChildren().add(focusBorderRect);
+        focusBorderRect.setVisible(false);
+        focusBorderRect.getStyleClass().add("radio-button-focus-border");
+        focusBorderListener = (e) -> focusBorderRect.setVisible(getSkinnable().isFocused());
+        getSkinnable().focusedProperty().addListener(focusBorderListener);
+//        System.out.println(getSkinnable().getToggleGroup().getToggles());
     }
-
 //    public void test() {
 //        getSkinnable().getToggleGroup().selectedToggleProperty().addListener((e) ());
 //
@@ -58,4 +75,21 @@ public class AeroRadioButtonSkin extends RadioButtonSkin implements AeroSkin {
 //
 //    }
 
+
+    @Override
+    protected void layoutChildren(double x, double y, double w, double h) {
+        super.layoutChildren(x, y, w, h);
+        getChildren().stream().filter(child -> child instanceof LabeledText).forEach(child -> {
+            focusBorderRect.setX(x+14);
+            focusBorderRect.setY(y);
+            focusBorderRect.setWidth(w-12);
+            focusBorderRect.setHeight(h);
+        });
+    }
+
+    @Override
+    public void dispose() {
+        super.dispose();
+        getSkinnable().focusedProperty().removeListener(focusBorderListener);
+    }
 }

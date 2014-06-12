@@ -30,14 +30,44 @@
 package com.aerofx_project.controls.skin;
 
 import com.sun.javafx.scene.control.skin.CheckBoxSkin;
+import com.sun.javafx.scene.control.skin.LabeledText;
+import javafx.beans.InvalidationListener;
 import javafx.scene.control.CheckBox;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 
 /**
  * Created by Matthias on 10.06.2014.
  */
 public class AeroCheckBoxSkin extends CheckBoxSkin implements AeroSkin {
 
+    private Rectangle focusBorderRect;
+    private InvalidationListener focusBorderListener;
+
     public AeroCheckBoxSkin(CheckBox checkbox) {
         super(checkbox);
+        focusBorderRect = new Rectangle(0,0, Color.TRANSPARENT);
+        getChildren().add(focusBorderRect);
+        focusBorderRect.setVisible(false);
+        focusBorderRect.getStyleClass().add("check-box-focus-border");
+        focusBorderListener = (e) -> focusBorderRect.setVisible(getSkinnable().isFocused());
+        getSkinnable().focusedProperty().addListener(focusBorderListener);
+    }
+
+    @Override
+    protected void layoutChildren(double x, double y, double w, double h) {
+        super.layoutChildren(x, y, w, h);
+        getChildren().stream().filter(child -> child instanceof LabeledText).forEach(child -> {
+            focusBorderRect.setX(x+17);
+            focusBorderRect.setY(y);
+            focusBorderRect.setWidth(w-16);
+            focusBorderRect.setHeight(h);
+        });
+    }
+
+    @Override
+    public void dispose() {
+        super.dispose();
+        getSkinnable().focusedProperty().removeListener(focusBorderListener);
     }
 }
