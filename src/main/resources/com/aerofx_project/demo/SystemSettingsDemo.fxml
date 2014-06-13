@@ -35,30 +35,27 @@
   ~ either expressed or implied, of the FreeBSD Project.
   -->
 
+<?import com.aerofx_project.controls.skin.AeroGroupBoxSkin?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="408.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aerofx_project.demo.SystemSettingsDemoController">
    <children>
-      <TabPane layoutX="6.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="399.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutX="6.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="398.0" tabClosingPolicy="UNAVAILABLE">
          <tabs>
             <Tab text="Computername">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="418.0" prefWidth="413.0">
                      <children>
-                        <Label layoutX="42.0" layoutY="14.0" prefHeight="34.0" prefWidth="357.0" text="Folgende Informationen werden zum Identifizieren des Computers &#10;im Netzwerk verwendet">
-                           <font>
-                              <Font size="11.0" />
-                           </font>
-                        </Label>
+                        <Label layoutX="42.0" layoutY="14.0" prefHeight="34.0" prefWidth="357.0" text="Folgende Informationen werden zum Identifizieren des Computers &#10;im Netzwerk verwendet"/>
                         <Label layoutX="14.0" layoutY="57.0" text="Computerbeschreibung:" />
-                        <TextField layoutX="165.0" layoutY="54.0" prefHeight="20.0" prefWidth="202.0" />
+                        <TextField layoutX="168.0" layoutY="55.0" prefHeight="20.0" prefWidth="203.0" />
                         <Label layoutX="165.0" layoutY="80.0" text="Zum Beispiel: &quot;Spielecomputer&quot; oder &#10;&quot;Heikes Computer&quot;" />
                         <Label layoutX="14.0" layoutY="114.0" text="Vollständiger Computername:" />
                         <Label layoutX="165.0" layoutY="114.0" text="Home-PC" />
                         <Label layoutX="14.0" layoutY="140.0" text="Arbeitsgruppe:" />
                         <Label layoutX="165.0" layoutY="140.0" text="WORKGROUP" />
                         <Label layoutX="14.0" layoutY="165.0" text="Klicken Sie auf &quot;Netzwerk-ID&quot;, um einer Domäne&#10;oder einer Arbeitsgruppe mithilfe eines Assistenten&#10;beizutreten." />
-                        <Button layoutX="293.0" layoutY="170.0" prefHeight="21.0" prefWidth="88.0" text="Netzwer_k-ID..." />
-                        <Label layoutX="14.0" layoutY="215.0" text="Klicken Sie auf &quot;Ändern&quot;, um diesen Computer&#10;umzubennen oder dessen Domäne oder&#10;Arbeitsgruppe zu ändern." />
-                        <Button layoutX="293.0" layoutY="215.0" prefHeight="21.0" prefWidth="88.0" text="Ä_ndern..." />
+                        <Button layoutX="282.0" layoutY="170.0" prefHeight="21.0" prefWidth="88.0" text="Netzwer_k-ID..." />
+                        <Label layoutX="14.0" layoutY="216.0" text="Klicken Sie auf &quot;Ändern&quot;, um diesen Computer&#10;umzubennen oder dessen Domäne oder&#10;Arbeitsgruppe zu ändern." />
+                        <Button layoutX="282.0" layoutY="216.0" prefHeight="21.0" prefWidth="88.0" text="Ä_ndern..." />
                      </children>
                   </AnchorPane>
                </content>
@@ -67,16 +64,18 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="17.0" layoutY="20.0" text="Geräte-Manager" />
-                         <Separator layoutX="129.0" layoutY="28.0" prefWidth="200.0" />
-                         <Label layoutX="61.0" layoutY="40.0" text="Der Geräte-Manager listet alle auf dem Computer installierten&#10;Hardwaregeräte auf. Verwenden Sie den Geräte-Manager, um&#10;die Eigenschaften eines Gerätes zu ändern" />
-                         <Button layoutX="152.0" layoutY="101.0" prefHeight="21.0" prefWidth="214.0" text="_Geräte-Manager" />
-                         <Separator layoutX="17.0" layoutY="134.0" prefHeight="0.0" prefWidth="399.0" />
-                         <Label layoutX="17.0" layoutY="141.0" text="Geräteinstallationseinstellungen" />
-                         <Separator layoutX="218.0" layoutY="149.0" prefHeight="0.0" prefWidth="111.0" />
-                         <Label layoutX="61.0" layoutY="169.0" text="Wählen Sie aus, ob für Ihre Geräte Treibersoftware und&#10;detaillierte Informationen heruntergeladen werden sollen." />
-                         <Button layoutX="152.0" layoutY="215.0" prefHeight="21.0" prefWidth="214.0" text="Gerä_teinstallationseinstellungen" />
-                         <Separator layoutX="11.0" layoutY="247.0" prefHeight="0.0" prefWidth="399.0" />
+                         <AeroGroupBoxSkin layoutX="14.0" layoutY="27.0" prefHeight="107.0" prefWidth="363.0" title="Geräte-Manager">
+                            <children>
+                                <Label layoutX="57.0" layoutY="12.0" text="Der Geräte-Manager listet alle auf dem Computer installierten&#10;Hardwaregeräte auf. Verwenden Sie den Geräte-Manager, um&#10;die Eigenschaften eines Gerätes zu ändern" />
+                                <Button layoutX="138.0" layoutY="74.0" prefHeight="21.0" prefWidth="214.0" text="_Geräte-Manager" />
+                            </children>
+                         </AeroGroupBoxSkin>
+                         <AeroGroupBoxSkin layoutX="14.0" layoutY="148.0" prefHeight="99.0" prefWidth="363.0" title="Geräteinstallationseinstellungen">
+                             <children>
+                                 <Label layoutX="57.0" layoutY="13.0" text="Wählen Sie aus, ob für Ihre Geräte Treibersoftware und&#10;detaillierte Informationen heruntergeladen werden sollen." />
+                                 <Button layoutX="138.0" layoutY="67.0" prefHeight="21.0" prefWidth="214.0" text="Gerä_teinstallationseinstellungen" />
+                             </children>
+                         </AeroGroupBoxSkin>
                      </children>
                   </AnchorPane>
                </content>
@@ -85,23 +84,26 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="26.0" layoutY="14.0" text="Sie müssen als Administrator angemeldet sein, um diese Änderungen&#10;durchführen zu können" />
-                        <Label layoutX="26.0" layoutY="57.0" text="Leistung" />
-                        <Separator layoutX="193.0" layoutY="64.0" prefWidth="200.0" />
-                        <Separator layoutX="193.0" layoutY="155.0" prefWidth="200.0" />
-                        <Label layoutX="26.0" layoutY="148.0" text="Benutzerprofile" />
-                        <Separator layoutX="193.0" layoutY="253.0" prefWidth="200.0" />
-                        <Label layoutX="26.0" layoutY="246.0" text="Leistung" />
-                        <Label layoutX="26.0" layoutY="74.0" text="Visuelle Effekte, Prozessorzeitplanung, Speichernutzung und virtueller&#10;Speicher" />
-                        <Button layoutX="284.0" layoutY="90.0" prefHeight="21.0" prefWidth="82.0" text="_Einstellungen" />
-                        <Button layoutX="284.0" layoutY="182.0" prefHeight="21.0" prefWidth="82.0" text="E_instellungen" />
-                        <Label layoutX="26.0" layoutY="165.0" text="Desktopeinstellungen bezüglich der Anmeldung" />
-                        <Button layoutX="284.0" layoutY="275.0" prefHeight="21.0" prefWidth="82.0" text="Ei_nstellungen" />
-                        <Label layoutX="26.0" layoutY="263.0" text="Systemstart, Systemfehler und Debuginformationen" />
+                        <Label layoutX="16.0" layoutY="5.0" text="Sie müssen als Administrator angemeldet sein, um diese Änderungen&#10;durchführen zu können" />
+                        <AeroGroupBoxSkin layoutX="14.0" layoutY="43.0" prefHeight="79.0" prefWidth="363.0" title="Leistung">
+                            <children>
+                                <Label layoutX="10.0" layoutY="12.0" text="Visuelle Effekte, Prozessorzeitplanung, Speichernutzung und virtueller&#10;Speicher" />
+                                <Button layoutX="269.0" layoutY="47.0" prefHeight="21.0" prefWidth="82.0" text="_Einstellungen" />
+                            </children>
+                        </AeroGroupBoxSkin>
+                        <AeroGroupBoxSkin layoutX="14.0" layoutY="135.0" prefHeight="79.0" prefWidth="363.0" title="Benutzerprofile">
+                            <children>
+                                <Label layoutX="10.0" layoutY="12.0" text="Desktopeinstellungen bezüglich der Anmeldung" />
+                                <Button layoutX="269.0" layoutY="47.0" prefHeight="21.0" prefWidth="82.0" text="E_instellungen" />
+                            </children>
+                        </AeroGroupBoxSkin>
+                        <AeroGroupBoxSkin layoutX="14.0" layoutY="227.0" prefHeight="79.0" prefWidth="363.0" title="Benutzerprofile">
+                            <children>
+                                <Label layoutX="10.0" layoutY="12.0" text="Systemstart, Systemfehler und Debuginformationen" />
+                                <Button layoutX="269.0" layoutY="47.0" prefHeight="21.0" prefWidth="82.0" text="Ei_nstellungen" />
+                            </children>
+                         </AeroGroupBoxSkin>
                         <Button layoutX="251.0" layoutY="321.0" prefHeight="21.0" prefWidth="126.0" text="_Umgebungsvariablen" />
-                        <Separator layoutX="10.0" layoutY="139.0" prefHeight="0.0" prefWidth="399.0" />
-                        <Separator layoutX="11.0" layoutY="235.0" prefHeight="0.0" prefWidth="399.0" />
-                        <Separator layoutX="10.0" layoutY="330.0" prefHeight="0.0" prefWidth="399.0" />
                      </children>
                   </AnchorPane>
                </content>
@@ -143,25 +145,27 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="392.0" prefWidth="390.0">
                      <children>
-                        <Label layoutX="29.0" layoutY="14.0" text="Remoteunterstützung" />
-                        <CheckBox layoutX="29.0" layoutY="53.0" mnemonicParsing="false" text="Remoteunterstützungsverbindungen mit diesem Computer zulassen" />
-                        <Label layoutX="29.0" layoutY="172.0" text="Klicken Sie auf eine Option und geben Sie ggf. anschließen an, wer&#10;eine Verbindung herstellen darf." />
-                        <Label layoutX="29.0" layoutY="140.0" text="Remotedesktop" />
-                        <RadioButton layoutX="22.0" layoutY="216.0" mnemonicParsing="false" selected="true" text="Keine Verbindung mit diesem Computer zulassen">
-                           <toggleGroup>
-                              <ToggleGroup fx:id="Select1" />
-                           </toggleGroup>
-                        </RadioButton>
-                        <RadioButton layoutX="22.0" layoutY="239.0" mnemonicParsing="false" text="Verbindungen von Computern zulassen, auf denen eine beliebige&#10;Version von Remotedesktop ausgeführt wird (weniger Sicherheit)" toggleGroup="$Select1" />
-                        <RadioButton layoutX="22.0" layoutY="280.0" mnemonicParsing="false" text="Verbindungen nur von Computern zulassen, auf denen Remotedesktop&#10;mit Authentifizierung auf Netzwerkebene ausgeführt wird (höhere&#10;Sicherheit)" toggleGroup="$Select1" />
-                        <Button layoutX="259.0" layoutY="336.0" prefHeight="21.0" prefWidth="133.0" text="Benutzer a_uswählen..." />
-                        <Separator layoutX="178.0" layoutY="21.0" prefWidth="200.0" />
-                        <Separator layoutX="166.0" layoutY="147.0" prefWidth="200.0" />
-                        <Separator layoutX="16.0" layoutY="132.0" prefHeight="0.0" prefWidth="399.0" />
-                        <Separator layoutX="16.0" layoutY="420.0" prefHeight="0.0" prefWidth="409.0" />
-                        <Hyperlink layoutX="28.0" layoutY="92.0" text="Was geschieht, wenn Remoteunterstützung aktiviert&#10;ist?" underline="true" />
-                        <Hyperlink layoutX="28.0" layoutY="337.0" text="Entscheidungshilfe" underline="true" />
-                        <Button layoutX="298.0" layoutY="100.0" prefHeight="21.0" prefWidth="91.0" text="_Erweitert" />
+                        <AeroGroupBoxSkin layoutX="12.0" layoutY="17.0" prefHeight="117.0" prefWidth="366.0" title="Remoteunterstützung">
+                            <children>
+                                <CheckBox layoutX="7.0" layoutY="25.0" mnemonicParsing="false" text="Remoteunterstützungsverbindungen mit diesem Computer zulassen" />
+                                <Hyperlink layoutX="7.0" layoutY="53.0" text="Was geschieht, wenn Remoteunterstützung aktiviert&#10;ist?" underline="true" />
+                                <Button layoutX="261.0" layoutY="83.0" prefHeight="21.0" prefWidth="91.0" text="_Erweitert" />
+                            </children>
+                        </AeroGroupBoxSkin>
+                        <AeroGroupBoxSkin layoutX="12.0" layoutY="148.0" prefHeight="208.0" prefWidth="366.0" title="Remotedesktop">
+                            <children>
+                                <Label layoutX="9.0" layoutY="19.0" text="Klicken Sie auf eine Option und geben Sie ggf. anschließen an, wer&#10;eine Verbindung herstellen darf." />
+                                <RadioButton layoutX="9.0" layoutY="54.0" mnemonicParsing="false" selected="true" text="Keine Verbindung mit diesem Computer zulassen">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="Select1" />
+                                    </toggleGroup>
+                                </RadioButton>
+                                <RadioButton layoutX="9.0" layoutY="75.0" mnemonicParsing="false" text="Verbindungen von Computern zulassen, auf denen eine beliebige&#10;Version von Remotedesktop ausgeführt wird (weniger Sicherheit)" toggleGroup="$Select1" />
+                                <RadioButton layoutX="9.0" layoutY="119.0" mnemonicParsing="false" text="Verbindungen nur von Computern zulassen, auf denen Remotedesktop&#10;mit Authentifizierung auf Netzwerkebene ausgeführt wird (höhere&#10;Sicherheit)" toggleGroup="$Select1" />
+                                <Hyperlink layoutX="5.0" layoutY="177.0" text="Entscheidungshilfe" underline="true" />
+                                <Button layoutX="222.0" layoutY="175.0" prefHeight="21.0" prefWidth="133.0" text="Benutzer a_uswählen..." />
+                            </children>
+                        </AeroGroupBoxSkin>
                      </children>
                   </AnchorPane>
                </content>
@@ -170,6 +174,6 @@
       </TabPane>
       <Button layoutX="171.0" layoutY="427.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="73.0" text="OK" />
       <Button layoutX="252.0" layoutY="427.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="73.0" text="Abbrechen" />
-      <Button layoutX="333.0" layoutY="427.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="73.0" text="Übernehmen" />
+      <Button disable="true" layoutX="333.0" layoutY="427.0" prefHeight="21.0" prefWidth="73.0" text="Ü_bernehmen" />
    </children>
 </AnchorPane>

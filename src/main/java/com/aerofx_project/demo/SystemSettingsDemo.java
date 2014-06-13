@@ -50,11 +50,10 @@ public class SystemSettingsDemo extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("SystemSettingsDemo.fxml"));
         primaryStage.setTitle("Systemeigenschaften");
         primaryStage.setResizable(false);
-        Scene myScene = new Scene(root, 403, 446);
+        Scene myScene = new Scene(root, 402, 446);
         myScene.getStylesheets().add(getClass().getResource("../win7.css").toExternalForm());
         primaryStage.setScene(myScene);
-
         primaryStage.show();
-        ScenicView.show(myScene);
+//        ScenicView.show(myScene);
     }
 }

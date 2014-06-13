@@ -32,6 +32,8 @@ package com.aerofx_project.controls.skin;
 import javafx.application.Application;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import javafx.geometry.HPos;
+import javafx.geometry.VPos;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
@@ -41,7 +43,7 @@ import javafx.scene.shape.Rectangle;
 /**
  * Created by Matthias on 12.06.2014.
  */
-/*TODO invert clipping Rectangle! */
+/*TODO invert clipping Rectangle! For now: White Label-Background */
 public class AeroGroupBoxSkin extends StackPane implements AeroSkin{
     private Label titleLabel;
     private Rectangle clipRect;
@@ -53,6 +55,9 @@ public class AeroGroupBoxSkin extends StackPane implements AeroSkin{
         super();
         getStyleClass().add("group-box");
         titleLabel = new Label("");
+        titleLabel.setStyle("-fx-background-color: white;");
+        titleLabel.setLayoutX(9);
+        titleLabel.setLayoutY(-7);
         getChildren().add(titleLabel);
         clipRect = new Rectangle();
 //        setClip(clipRect);
@@ -60,12 +65,12 @@ public class AeroGroupBoxSkin extends StackPane implements AeroSkin{
 
     @Override
     protected void layoutChildren() {
-        super.layoutChildren();
-        titleLabel.setLayoutX(9);
-        titleLabel.setLayoutY(-7);
-        clipRect.setX(titleLabel.getLayoutX());
-        clipRect.setY(titleLabel.getLayoutY());
-        clipRect.setWidth(titleLabel.getWidth());
-        clipRect.setHeight(titleLabel.getHeight());
+//        clipRect.setX(titleLabel.getLayoutX());
+//        clipRect.setY(titleLabel.getLayoutY());
+//        clipRect.setWidth(titleLabel.getWidth());
+//        clipRect.setHeight(titleLabel.getHeight());
+        for (Node c : getChildren()){
+            layoutInArea(c, c.getLayoutX(), c.getLayoutY(), c.prefWidth(-1), c.prefHeight(-1), 0, HPos.LEFT, VPos.TOP);
+        }
     }
 }
