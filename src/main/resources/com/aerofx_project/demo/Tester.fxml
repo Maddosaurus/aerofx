@@ -48,6 +48,11 @@
       <RadioButton layoutX="193.0" layoutY="122.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$one" />
       <CheckBox disable="true" layoutX="193.0" layoutY="54.0" mnemonicParsing="false" text="CheckBox" />
       <RadioButton disable="true" layoutX="193.0" layoutY="152.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$one" />
-      <AeroGroupBoxSkin layoutX="25.0" layoutY="140.0" prefHeight="21.0" prefWidth="60.0" title="Untitled"/>
+      <AeroGroupBoxSkin layoutX="25.0" layoutY="140.0" prefHeight="50.0" prefWidth="70.0" title="Untitled">
+          <children>
+              <Button layoutX="25.0" layoutY="23.0" prefHeight="21.0" prefWidth="60.0" mnemonicParsing="false" text="Child" />
+          </children>
+       </AeroGroupBoxSkin>
+
    </children>
 </AnchorPane>

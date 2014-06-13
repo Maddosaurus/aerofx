@@ -301,6 +301,6 @@
 *                                           *
 *********************************************/
 .group-box{
-    -fx-border-color: green;
+    -fx-border-color: rgb(213,223,229);
     -fx-border-radius: 3;
 }

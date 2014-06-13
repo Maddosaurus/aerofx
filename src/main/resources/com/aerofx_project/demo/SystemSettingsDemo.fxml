@@ -110,7 +110,6 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="74.0" layoutY="6.0" text="Verwenden Sie den Computerschutz, um unerwünschte&#10;Systemänderungen rückgängig zu machen und vorherige&#10;Versionen von Dateien wiederherzustellen. &lt;a&gt;Was ist der&#10;Computerschutz?&lt;/a&gt;" />
                         <Label layoutX="17.0" layoutY="81.0" text="Systemwiederherstellung" />
                         <Label layoutX="27.0" layoutY="106.0" text="Sie können unerwünschte&#10;Systemänderungen rückgängig machen,&#10;indem Sie den Computer auf einen&#10;vorherigen Wiederherstellungspunkt&#10;zurücksetzen." />
                         <Label layoutX="22.0" layoutY="200.0" text="Schutzeinstellungen" />
@@ -130,6 +129,12 @@
                             <TableColumn minWidth="0.0" prefWidth="128.0" text="Schutz" />
                           </columns>
                         </TableView>
+                        <TextFlow layoutX="50.0" layoutY="14.0" prefHeight="62.0" prefWidth="345.0">
+                           <children>
+                              <Label text="Verwenden Sie den Computerschutz, um unerwünschte&#10;Systemänderungen rückgängig zu machen und vorherige&#10;Versionen von Dateien wiederherzustellen." />
+                              <Hyperlink text="Was ist der&#10;Computerschutz?" />
+                           </children>
+                        </TextFlow>
                      </children>
                   </AnchorPane>
                </content>

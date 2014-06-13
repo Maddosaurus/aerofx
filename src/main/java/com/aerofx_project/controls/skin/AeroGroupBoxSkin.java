@@ -32,14 +32,16 @@ package com.aerofx_project.controls.skin;
 import javafx.application.Application;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Rectangle;
 
 
 /**
- * Created by Shivy on 12.06.2014.
+ * Created by Matthias on 12.06.2014.
  */
+/*TODO invert clipping Rectangle! */
 public class AeroGroupBoxSkin extends StackPane implements AeroSkin{
     private Label titleLabel;
     private Rectangle clipRect;
@@ -53,13 +55,14 @@ public class AeroGroupBoxSkin extends StackPane implements AeroSkin{
         titleLabel = new Label("");
         getChildren().add(titleLabel);
         clipRect = new Rectangle();
+//        setClip(clipRect);
     }
 
     @Override
     protected void layoutChildren() {
         super.layoutChildren();
-        titleLabel.setLayoutX(5);
-        titleLabel.setLayoutY(-8);
+        titleLabel.setLayoutX(9);
+        titleLabel.setLayoutY(-7);
         clipRect.setX(titleLabel.getLayoutX());
         clipRect.setY(titleLabel.getLayoutY());
         clipRect.setWidth(titleLabel.getWidth());
