@@ -43,7 +43,7 @@ import javafx.scene.shape.Rectangle;
 /**
  * Created by Matthias on 12.06.2014.
  */
-/*TODO invert clipping Rectangle! For now: White Label-Background */
+/*TODO: Invert clipping Rectangle! For now: White Label-Background */
 public class AeroGroupBoxSkin extends StackPane implements AeroSkin{
     private Label titleLabel;
     private Rectangle clipRect;

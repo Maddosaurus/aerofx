@@ -29,13 +29,15 @@
 
 package com.aerofx_project.controls.skin;
 
-import com.sun.javafx.scene.control.skin.LabeledText;
 import com.sun.javafx.scene.control.skin.RadioButtonSkin;
 import javafx.beans.InvalidationListener;
-import javafx.beans.Observable;
+import javafx.beans.value.ChangeListener;
 import javafx.event.EventHandler;
-import javafx.scene.Node;
+import javafx.geometry.Pos;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.Toggle;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -43,6 +45,9 @@ import javafx.scene.shape.Rectangle;
 /**
  * Created by Matthias on 10.06.2014.
  */
+/*TODO: Text of the RadioButton is VAlign.Centered. 1st Line has to be in line with RadioButton itself.
+*         layoutLabelInArea(...) doesn't seem to work
+*/
 public class AeroRadioButtonSkin extends RadioButtonSkin implements AeroSkin {
     /**
      * Used for laying out the label + radio together as a group
@@ -55,9 +60,12 @@ public class AeroRadioButtonSkin extends RadioButtonSkin implements AeroSkin {
      */
     private Rectangle focusBorderRect;
     private InvalidationListener focusBorderListener;
+    private ChangeListener<? super Toggle> focusTraverseListener;
+    private EventHandler<KeyEvent> keyListener;
 
     public AeroRadioButtonSkin(RadioButton radioButton) {
         super(radioButton);
+
         focusBorderRect = new Rectangle(0, 0, Color.TRANSPARENT);
         getChildren().add(focusBorderRect);
         focusBorderRect.setVisible(false);
@@ -65,31 +73,52 @@ public class AeroRadioButtonSkin extends RadioButtonSkin implements AeroSkin {
         focusBorderListener = (e) -> focusBorderRect.setVisible(getSkinnable().isFocused());
         getSkinnable().focusedProperty().addListener(focusBorderListener);
 
-    }
-//    public void test() {
-//        getSkinnable().getToggleGroup().selectedToggleProperty().addListener((e) ());
-//
-//        getSkinnable().onKeyPressedProperty()
-//
-//                //unda dann requestfocus
-//
-//    }
+        focusTraverseListener = (observable, oldValue, newValue) -> {
+            ((RadioButton)oldValue).setFocusTraversable(false);
+            ((RadioButton)newValue).setFocusTraversable(true);
+        };
+        getSkinnable().getToggleGroup().selectedToggleProperty().addListener(focusTraverseListener);
 
+        keyListener = event -> {
+            ToggleGroup tg = getSkinnable().getToggleGroup();
+            Toggle sel = tg.getSelectedToggle();
+            Toggle act;
+            int number = -1;
+            for (int i=0; i< tg.getToggles().size(); i++){
+                act = tg.getToggles().get(i);
+                if(act.equals(sel)){
+                    number = i;
+                }
+            }
+            if (event.getCode() == KeyCode.UP) {
+                if(number <= tg.getToggles().size() && number>0) {
+                    getSkinnable().getToggleGroup().selectToggle(tg.getToggles().get(number - 1));
+                    ((RadioButton)getSkinnable().getToggleGroup().getSelectedToggle()).requestFocus();
+                }
+            }
+            else if (event.getCode() == KeyCode.DOWN) {
+                if(number < tg.getToggles().size()-1) {
+                    getSkinnable().getToggleGroup().selectToggle(getSkinnable().getToggleGroup().getToggles().get(number + 1));
+                    ((RadioButton)getSkinnable().getToggleGroup().getSelectedToggle()).requestFocus();
+                }
+            }
+        };
+        getSkinnable().setOnKeyPressed(keyListener);
+    }
 
     @Override
     protected void layoutChildren(double x, double y, double w, double h) {
         super.layoutChildren(x, y, w, h);
-        getChildren().stream().filter(child -> child instanceof LabeledText).forEach(child -> {
-            focusBorderRect.setX(x+14);
-            focusBorderRect.setY(y);
-            focusBorderRect.setWidth(w-12);
-            focusBorderRect.setHeight(h);
-        });
+        focusBorderRect.setX(x + 14);
+        focusBorderRect.setY(y);
+        focusBorderRect.setWidth(w-12);
+        focusBorderRect.setHeight(h);
     }
 
     @Override
     public void dispose() {
         super.dispose();
         getSkinnable().focusedProperty().removeListener(focusBorderListener);
+        getSkinnable().getToggleGroup().selectedToggleProperty().removeListener(focusTraverseListener);
     }
 }
