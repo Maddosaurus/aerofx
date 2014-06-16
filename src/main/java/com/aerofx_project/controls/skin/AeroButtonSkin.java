@@ -80,6 +80,25 @@ public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
                 focusedButtonTransition.stop();
         };
         getSkinnable().focusedProperty().addListener(focusTabListener);
+        getSkinnable().armedProperty().addListener((e) -> {
+            if(getSkinnable().isArmed()) {
+                focusedButtonTransition.stop();
+            } else {
+                if(getSkinnable().isFocused()) {
+                    focusedButtonTransition.play();
+                }
+            }
+        });
+        getSkinnable().hoverProperty().addListener((e) -> {
+            if(getSkinnable().isHover()) {
+                focusedButtonTransition.stop();
+            } else {
+                if(getSkinnable().isFocused()) {
+                    focusedButtonTransition.jumpToEnd();
+                    focusedButtonTransition.play();
+                }
+            }
+        });
     }
 
     @Override
@@ -91,7 +110,6 @@ public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
         focusBorderRect.setHeight(h-4);
     }
 
-    /*TODO: Troubleshoot pressed!! On MousePressed, Button shows pressed CSS for a fracture of a second, then returns to focused*/
     private void setFocusedButtonAnimation(){
         if(!getSkinnable().isDisabled()){
             if(focusedButtonTransition != null && focusedButtonTransition.getStatus() == Animation.Status.RUNNING)

@@ -30,4 +30,8 @@ public class BindableTransition extends Transition {
     public ReadOnlyDoubleProperty fractionProperty() {
         return fraction;
     }
+
+    public void jumpToEnd() {
+        jumpTo(getCycleDuration());
+    }
 }

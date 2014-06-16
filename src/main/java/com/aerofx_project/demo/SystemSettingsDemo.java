@@ -48,7 +48,7 @@ public class SystemSettingsDemo extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("SystemSettingsDemo.fxml"));
-        primaryStage.setTitle("Systemeigenschaften");
+        primaryStage.setTitle("Systemeigenschaften (JavaFX)");
         primaryStage.setResizable(false);
         Scene myScene = new Scene(root, 402, 446);
         myScene.getStylesheets().add(getClass().getResource("../win7.css").toExternalForm());

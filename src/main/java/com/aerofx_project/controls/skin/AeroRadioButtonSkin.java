@@ -45,9 +45,6 @@ import javafx.scene.shape.Rectangle;
 /**
  * Created by Matthias on 10.06.2014.
  */
-/*TODO: Text of the RadioButton is VAlign.Centered. 1st Line has to be in line with RadioButton itself.
-*         layoutLabelInArea(...) doesn't seem to work
-*/
 public class AeroRadioButtonSkin extends RadioButtonSkin implements AeroSkin {
     /**
      * Used for laying out the label + radio together as a group
@@ -82,14 +79,8 @@ public class AeroRadioButtonSkin extends RadioButtonSkin implements AeroSkin {
         keyListener = event -> {
             ToggleGroup tg = getSkinnable().getToggleGroup();
             Toggle sel = tg.getSelectedToggle();
-            Toggle act;
-            int number = -1;
-            for (int i=0; i< tg.getToggles().size(); i++){
-                act = tg.getToggles().get(i);
-                if(act.equals(sel)){
-                    number = i;
-                }
-            }
+            int number = tg.getToggles().indexOf(sel);
+
             if (event.getCode() == KeyCode.UP) {
                 if(number <= tg.getToggles().size() && number>0) {
                     getSkinnable().getToggleGroup().selectToggle(tg.getToggles().get(number - 1));
@@ -113,6 +104,8 @@ public class AeroRadioButtonSkin extends RadioButtonSkin implements AeroSkin {
         focusBorderRect.setY(y);
         focusBorderRect.setWidth(w-12);
         focusBorderRect.setHeight(h);
+
+        getSkinnable().lookup(".radio").relocate(0, 3);
     }
 
     @Override
