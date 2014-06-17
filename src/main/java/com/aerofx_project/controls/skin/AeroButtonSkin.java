@@ -84,31 +84,25 @@ public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
         };
         getSkinnable().focusedProperty().addListener(focusTabListener);
 
-        armedListener = new InvalidationListener() {
-            @Override
-            public void invalidated(Observable observable) {
+        armedListener = observable -> {
 
-                if (getSkinnable().isArmed()) {
-                    focusedButtonTransition.stop();
-                } else {
-                    if (getSkinnable().isFocused()) {
-                        focusedButtonTransition.play();
-                    }
+            if (getSkinnable().isArmed()) {
+                focusedButtonTransition.stop();
+            } else {
+                if (getSkinnable().isFocused()) {
+                    focusedButtonTransition.play();
                 }
             }
         };
         getSkinnable().armedProperty().addListener(armedListener);
 
-        hoverListener = new InvalidationListener() {
-            @Override
-            public void invalidated(Observable observable) {
-                if(getSkinnable().isHover()) {
-                    focusedButtonTransition.stop();
-                } else {
-                    if(getSkinnable().isFocused()) {
-                        focusedButtonTransition.jumpToEnd();
-                        focusedButtonTransition.play();
-                    }
+        hoverListener = observable -> {
+            if(getSkinnable().isHover()) {
+                focusedButtonTransition.stop();
+            } else {
+                if(getSkinnable().isFocused()) {
+                    focusedButtonTransition.jumpToEnd();
+                    focusedButtonTransition.play();
                 }
             }
         };

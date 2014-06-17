@@ -306,3 +306,11 @@
     -fx-border-color: rgb(213,223,229);
     -fx-border-radius: 3;
 }
+
+/*.group-box-border{
+    -fx-stroke: rgb(180,196,205);
+    -fx-stroke-width: 1px;
+    -fx-arc-height: 6px;
+    -fx-arc-width: 6px;
+    -fx-stroke-line-join: round;
+}*/
