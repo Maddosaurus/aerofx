@@ -34,14 +34,17 @@ import javafx.geometry.VPos;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
+import javafx.scene.shape.Rectangle;
 
 
 /**
  * Created by Matthias on 12.06.2014.
  */
-/*TODO: Invert clipping Rectangle! For now: White Label-Background */
 public class AeroGroupBoxSkin extends StackPane implements AeroSkin{
     private Label titleLabel;
+    private Rectangle captionBg;
+    private Rectangle groupBoxBg;
+    private Rectangle clippingRect;
 
     public final String getTitle(){return titleLabel.getText();}
     public final void setTitle(String value){titleLabel.setText(value);}
@@ -50,8 +53,14 @@ public class AeroGroupBoxSkin extends StackPane implements AeroSkin{
         super();
         getStyleClass().add("group-box");
         titleLabel = new Label("");
-        titleLabel.setStyle("-fx-background-color: white;");
         getChildren().add(titleLabel);
+        captionBg = new Rectangle();
+        groupBoxBg = new Rectangle();
+        groupBoxBg.setStyle("-fx-fill:transparent;");
+        clippingRect = new Rectangle();
+        getChildren().add(groupBoxBg);
+        groupBoxBg.getStyleClass().add("group-box-border");
+        layoutChildren();   //Shouldn't be called here, but border is only showing up on Mouseover if not called
     }
 
     @Override
@@ -59,6 +68,21 @@ public class AeroGroupBoxSkin extends StackPane implements AeroSkin{
         for (Node c : getChildren()){
             layoutInArea(c, c.getLayoutX(), c.getLayoutY(), c.prefWidth(-1), c.prefHeight(-1), 0, HPos.LEFT, VPos.TOP);
         }
+
         titleLabel.relocate(9, -7);
+        captionBg.setX(titleLabel.getLayoutX()-2);
+        captionBg.setY(titleLabel.getLayoutY());
+        captionBg.setWidth(titleLabel.getWidth()+4);
+        captionBg.setHeight(titleLabel.getHeight());
+
+        groupBoxBg.relocate(0, 0);
+        groupBoxBg.setWidth(getPrefWidth());
+        groupBoxBg.setHeight(getPrefHeight());
+
+        clippingRect.relocate(0, 0);
+        clippingRect.setWidth(getPrefWidth());
+        clippingRect.setHeight(getPrefHeight());
+
+        groupBoxBg.setClip(Rectangle.subtract(clippingRect, captionBg));
     }
 }
