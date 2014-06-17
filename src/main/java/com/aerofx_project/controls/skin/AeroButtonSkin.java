@@ -32,6 +32,8 @@ package com.aerofx_project.controls.skin;
 import com.sun.javafx.scene.control.skin.ButtonSkin;
 import javafx.animation.Animation;
 import javafx.animation.Timeline;
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.geometry.Insets;
@@ -62,6 +64,8 @@ public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
     private BindableTransition focusedButtonTransition;
 
     private ChangeListener<Boolean> focusTabListener;
+    private InvalidationListener armedListener;
+    private InvalidationListener hoverListener;
 
     public AeroButtonSkin(Button button) {
         super(button);
@@ -73,32 +77,42 @@ public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
 
         focusTabListener = (observable, oldValue, newValue) -> {
             focusBorderRect.setVisible(newValue);
-
             if(newValue)
                 focusedButtonTransition.play();
             else
                 focusedButtonTransition.stop();
         };
         getSkinnable().focusedProperty().addListener(focusTabListener);
-        getSkinnable().armedProperty().addListener((e) -> {
-            if(getSkinnable().isArmed()) {
-                focusedButtonTransition.stop();
-            } else {
-                if(getSkinnable().isFocused()) {
-                    focusedButtonTransition.play();
+
+        armedListener = new InvalidationListener() {
+            @Override
+            public void invalidated(Observable observable) {
+
+                if (getSkinnable().isArmed()) {
+                    focusedButtonTransition.stop();
+                } else {
+                    if (getSkinnable().isFocused()) {
+                        focusedButtonTransition.play();
+                    }
                 }
             }
-        });
-        getSkinnable().hoverProperty().addListener((e) -> {
-            if(getSkinnable().isHover()) {
-                focusedButtonTransition.stop();
-            } else {
-                if(getSkinnable().isFocused()) {
-                    focusedButtonTransition.jumpToEnd();
-                    focusedButtonTransition.play();
+        };
+        getSkinnable().armedProperty().addListener(armedListener);
+
+        hoverListener = new InvalidationListener() {
+            @Override
+            public void invalidated(Observable observable) {
+                if(getSkinnable().isHover()) {
+                    focusedButtonTransition.stop();
+                } else {
+                    if(getSkinnable().isFocused()) {
+                        focusedButtonTransition.jumpToEnd();
+                        focusedButtonTransition.play();
+                    }
                 }
             }
-        });
+        };
+        getSkinnable().hoverProperty().addListener(hoverListener);
     }
 
     @Override
@@ -173,6 +187,8 @@ public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
     public void dispose() {
         super.dispose();
         getSkinnable().focusedProperty().removeListener(focusTabListener);
+        getSkinnable().armedProperty().removeListener(armedListener);
+        getSkinnable().hoverProperty().removeListener(hoverListener);
     }
 
 

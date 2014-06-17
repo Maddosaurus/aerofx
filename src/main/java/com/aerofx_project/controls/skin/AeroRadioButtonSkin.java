@@ -113,5 +113,6 @@ public class AeroRadioButtonSkin extends RadioButtonSkin implements AeroSkin {
         super.dispose();
         getSkinnable().focusedProperty().removeListener(focusBorderListener);
         getSkinnable().getToggleGroup().selectedToggleProperty().removeListener(focusTraverseListener);
+        getSkinnable().setOnKeyPressed(null);
     }
 }
