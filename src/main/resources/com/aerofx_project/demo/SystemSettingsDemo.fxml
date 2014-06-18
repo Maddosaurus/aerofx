@@ -34,6 +34,8 @@
   -->
 
 <?import com.aerofx_project.controls.skin.AeroGroupBoxSkin?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.image.Image?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="408.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aerofx_project.demo.SystemSettingsDemoController">
    <children>
       <TabPane layoutX="6.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="398.0" tabClosingPolicy="UNAVAILABLE">
@@ -42,7 +44,10 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="418.0" prefWidth="413.0">
                      <children>
-                        <Label layoutX="42.0" layoutY="14.0" prefHeight="34.0" prefWidth="357.0" text="Folgende Informationen werden zum Identifizieren des Computers &#10;im Netzwerk verwendet"/>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="14.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                            <image> <Image url="@icons/pc.png" /> </image>
+                         </ImageView>
+                        <Label layoutX="63.0" layoutY="14.0" prefHeight="34.0" prefWidth="357.0" text="Folgende Informationen werden zum Identifizieren des Computers &#10;im Netzwerk verwendet."/>
                         <Label layoutX="14.0" layoutY="57.0" text="Computerbeschreibung:" />
                         <TextField layoutX="168.0" layoutY="55.0" prefHeight="20.0" prefWidth="203.0" />
                         <Label layoutX="165.0" layoutY="80.0" text="Zum Beispiel: &quot;Spielecomputer&quot; oder &#10;&quot;Heikes Computer&quot;" />
@@ -64,12 +69,18 @@
                      <children>
                          <AeroGroupBoxSkin layoutX="14.0" layoutY="27.0" prefHeight="107.0" prefWidth="363.0" title="Geräte-Manager">
                             <children>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                                    <image> <Image url="@icons/manager.png" /> </image>
+                                </ImageView>
                                 <Label layoutX="57.0" layoutY="12.0" text="Der Geräte-Manager listet alle auf dem Computer installierten&#10;Hardwaregeräte auf. Verwenden Sie den Geräte-Manager, um&#10;die Eigenschaften eines Gerätes zu ändern." />
                                 <Button layoutX="138.0" layoutY="74.0" prefHeight="21.0" prefWidth="214.0" text="_Geräte-Manager" />
                             </children>
                          </AeroGroupBoxSkin>
                          <AeroGroupBoxSkin layoutX="14.0" layoutY="148.0" prefHeight="99.0" prefWidth="363.0" title="Geräteinstallationseinstellungen">
                              <children>
+                                 <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                     <image> <Image url="@icons/checklist.png" /> </image>
+                                 </ImageView>
                                  <Label layoutX="57.0" layoutY="13.0" text="Wählen Sie aus, ob für Ihre Geräte Treibersoftware und&#10;detaillierte Informationen heruntergeladen werden sollen." />
                                  <Button layoutX="138.0" layoutY="67.0" prefHeight="21.0" prefWidth="214.0" text="Gerä_teinstallationseinstellungen" />
                              </children>
@@ -110,6 +121,9 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
+                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                             <image> <Image url="@icons/pcbackup.png" /> </image>
+                         </ImageView>
                          <TextFlow layoutX="59.0" layoutY="5.0" prefHeight="62.0" prefWidth="345.0">
                              <children>
                                  <Label text="Verwenden Sie den Computerschutz, um unerwünschte&#10;Systemänderungen rückgängig zu machen und vorherige&#10;Versionen von Dateien wiederherzustellen." />
