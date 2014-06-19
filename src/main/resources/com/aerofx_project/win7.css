@@ -164,6 +164,21 @@
         linear-gradient(rgb(239.0, 239.0, 239.0), rgb(250.0, 250.0, 250.0));
 }
 
+.check-box:selected > .box > .mark{
+    -fx-shape: "M 5.1806931,9.0173267 7.5232674,12.170792 11.307426,4.4673266 10.091089,3.9717821 7.2980199,9.6029703 6.1267328,7.9361386 z";
+    -fx-background-color: rgb(76,97,152);
+}
+
+.check-box:selected:hover > .box > .mark{
+    -fx-shape: "M 5.1806931,9.0173267 7.5232674,12.170792 11.307426,4.4673266 10.091089,3.9717821 7.2980199,9.6029703 6.1267328,7.9361386 z";
+    -fx-background-color: rgb(4,34,113);
+}
+
+.check-box:selected:pressed > .box > .mark{
+    -fx-shape: "M 5.1806931,9.0173267 7.5232674,12.170792 11.307426,4.4673266 10.091089,3.9717821 7.2980199,9.6029703 6.1267328,7.9361386 z";
+    -fx-background-color: rgb(44,83,148);
+}
+
 
 /********************************************
 *                                           *
@@ -213,16 +228,29 @@
 }
 
 .radio-button:selected > .radio > .dot{
-    -fx-padding: 0.28em;
-    -fx-pref-height: 3px;
-    -fx-pref-width: 3px;
+    -fx-padding: 0.35em;
+    -fx-pref-height: 4px;
+    -fx-pref-width: 4px;
     -fx-background-color:
-        rgb(24,51,72),
+        rgb(20,47,68),
         rgb(11,130,199),
-        linear-gradient(to bottom right, rgb(255,255,255), rgb(11,130,199) 60%);
-    -fx-background-insets: 0,1,1;
+        linear-gradient(to bottom right, rgb(255,255,255) 20%, rgb(11,130,199) 60%);
+    -fx-background-insets: 0,1,2;
 }
 
+.radio-button:selected:hover > .radio > .dot{
+   -fx-background-color:
+        rgb(20,47,68),
+        rgb(11,130,199),
+        linear-gradient(to bottom right, rgb(255,255,255) 20%, rgb(13,160,243) 60%);
+}
+
+.radio-button:selected:pressed > .radio > .dot{
+   -fx-background-color:
+        rgb(20,47,68),
+        rgb(11,130,199),
+    linear-gradient(to bottom right, rgb(255,255,255) 20%, rgb(7,84,131) 60%);
+}
 
 /********************************************
 *                                           *

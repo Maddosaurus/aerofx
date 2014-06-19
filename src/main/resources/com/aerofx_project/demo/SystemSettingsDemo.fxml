@@ -167,13 +167,13 @@
                         <AeroGroupBoxSkin layoutX="12.0" layoutY="148.0" prefHeight="208.0" prefWidth="366.0" title="Remotedesktop">
                             <children>
                                 <Label layoutX="9.0" layoutY="19.0" text="Klicken Sie auf eine Option und geben Sie ggf. anschließen an, wer&#10;eine Verbindung herstellen darf." />
-                                <RadioButton layoutX="9.0" layoutY="54.0" selected="true" text="_Keine Verbindung mit diesem Computer zulassen">
+                                <RadioButton layoutX="9.0" layoutY="53.0" selected="true" text="_Keine Verbindung mit diesem Computer zulassen">
                                     <toggleGroup>
                                         <ToggleGroup fx:id="Select1" />
                                     </toggleGroup>
                                 </RadioButton>
-                                <RadioButton focusTraversable="false" layoutX="9.0" layoutY="75.0" text="_Verbindungen von Computern zulassen, auf denen eine beliebige&#10;Version von Remotedesktop ausgeführt wird (weniger Sicherheit)" toggleGroup="$Select1" />
-                                <RadioButton focusTraversable="false" layoutX="9.0" layoutY="119.0" text="Verbi_ndungen nur von Computern zulassen, auf denen Remotedesktop&#10;mit Authentifizierung auf Netzwerkebene ausgeführt wird (höhere&#10;Sicherheit)" toggleGroup="$Select1" />
+                                <RadioButton focusTraversable="false" layoutX="9.0" layoutY="82.0" text="_Verbindungen von Computern zulassen, auf denen eine beliebige&#10;Version von Remotedesktop ausgeführt wird (weniger Sicherheit)" toggleGroup="$Select1" />
+                                <RadioButton focusTraversable="false" layoutX="9.0" layoutY="134.0" text="Verbi_ndungen nur von Computern zulassen, auf denen Remotedesktop&#10;mit Authentifizierung auf Netzwerkebene ausgeführt wird (höhere&#10;Sicherheit)" toggleGroup="$Select1" />
                                 <Hyperlink layoutX="5.0" layoutY="177.0" text="Entscheidungshilfe" underline="true" />
                                 <Button layoutX="222.0" layoutY="175.0" prefHeight="21.0" prefWidth="133.0" text="Benutzer a_uswählen..." />
                             </children>
