@@ -29,6 +29,7 @@
 
 package com.aerofx_project.demo;
 
+import com.aerofx_project.AeroFX;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -45,7 +46,7 @@ public class Tester extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("Tester.fxml"));
         primaryStage.setTitle("Some random Tester");
         Scene myScene = new Scene(root, 300, 200);
-        myScene.getStylesheets().add(getClass().getResource("../win7.css").toExternalForm());
+        AeroFX.style();
         primaryStage.setScene(myScene);
         primaryStage.show();
     }

@@ -29,13 +29,15 @@
 
 package com.aerofx_project;
 
+import javafx.application.Application;
+
 /**
  * Created by Matthias on 27.05.2014.
  */
 public class AeroFX {
-    private final String AERO_CSS_NAME = AeroFX.class.getResource("win7.css").toExternalForm();
+    private final static String AERO_CSS_NAME = AeroFX.class.getResource("win7.css").toExternalForm();
 
     public static void style(){
-        //Not implemented
+        Application.setUserAgentStylesheet(AERO_CSS_NAME);
     }
 }

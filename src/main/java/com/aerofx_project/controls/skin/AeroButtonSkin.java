@@ -91,6 +91,8 @@ public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
             } else {
                 if (getSkinnable().isFocused()) {
                     focusedButtonTransition.play();
+                } else if (!getSkinnable().isFocused()){
+                    focusedButtonTransition.stop();
                 }
             }
         };
@@ -103,6 +105,8 @@ public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
                 if(getSkinnable().isFocused()) {
                     focusedButtonTransition.jumpToEnd();
                     focusedButtonTransition.play();
+                } else if (!getSkinnable().isFocused()){
+                    focusedButtonTransition.stop();
                 }
             }
         };
