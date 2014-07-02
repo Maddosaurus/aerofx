@@ -36,6 +36,7 @@ import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.css.StyleableProperty;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Background;
@@ -80,19 +81,19 @@ public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
             if(newValue)
                 focusedButtonTransition.play();
             else
-                focusedButtonTransition.stop();
+                resetAnimation();
         };
         getSkinnable().focusedProperty().addListener(focusTabListener);
 
         armedListener = observable -> {
 
             if (getSkinnable().isArmed()) {
-                focusedButtonTransition.stop();
+                resetAnimation();
             } else {
                 if (getSkinnable().isFocused()) {
                     focusedButtonTransition.play();
                 } else if (!getSkinnable().isFocused()){
-                    focusedButtonTransition.stop();
+                    resetAnimation();
                 }
             }
         };
@@ -100,13 +101,13 @@ public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
 
         hoverListener = observable -> {
             if(getSkinnable().isHover()) {
-                focusedButtonTransition.stop();
+                resetAnimation();
             } else {
                 if(getSkinnable().isFocused()) {
                     focusedButtonTransition.jumpToEnd();
                     focusedButtonTransition.play();
                 } else if (!getSkinnable().isFocused()){
-                    focusedButtonTransition.stop();
+                    resetAnimation();
                 }
             }
         };
@@ -116,16 +117,21 @@ public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
     @Override
     protected void layoutChildren(double x, double y, double w, double h) {
         super.layoutChildren(x, y, w, h);
-        focusBorderRect.setX(x+2);
-        focusBorderRect.setY(y+2);
-        focusBorderRect.setWidth(w-4);
-        focusBorderRect.setHeight(h-4);
+        focusBorderRect.setX(x + 2);
+        focusBorderRect.setY(y + 2);
+        focusBorderRect.setWidth(w - 4);
+        focusBorderRect.setHeight(h - 4);
+    }
+
+    private void resetAnimation(){
+        focusedButtonTransition.stop();
+        getSkinnable().impl_reapplyCSS();
     }
 
     private void setFocusedButtonAnimation(){
         if(!getSkinnable().isDisabled()){
             if(focusedButtonTransition != null && focusedButtonTransition.getStatus() == Animation.Status.RUNNING)
-                focusedButtonTransition.stop();
+                resetAnimation();
             else{
                 final Duration duration = Duration.millis(1000);
                 focusedButtonTransition = new BindableTransition(duration);
@@ -175,7 +181,8 @@ public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
                         BackgroundFill bgFill = new BackgroundFill(gradient, new CornerRadii(1.0), new Insets(2.0));
                         list.add(bgFill);
 
-                        getSkinnable().setBackground(new Background(list.get(0), list.get(1), list.get(2)));
+//                        getSkinnable().setBackground(new Background(list.get(0), list.get(1), list.get(2)));
+                        ((StyleableProperty<Background>)getSkinnable().backgroundProperty()).applyStyle(null, new Background(list.get(0), list.get(1), list.get(2)));
                     }
                 });
             }
