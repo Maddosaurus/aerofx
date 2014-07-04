@@ -29,60 +29,73 @@
 
 package com.aerofx_project.controls.skin;
 
+import com.sun.javafx.css.converters.StringConverter;
+import javafx.css.*;
 import javafx.geometry.HPos;
 import javafx.geometry.VPos;
 import javafx.scene.Node;
+import javafx.scene.control.Control;
 import javafx.scene.control.Label;
+import javafx.scene.control.SkinBase;
+import javafx.scene.control.TitledPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Rectangle;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 
 /**
  * Created by Matthias on 12.06.2014.
  */
-public class AeroGroupBoxSkin extends StackPane implements AeroSkin{
+public class AeroGroupBoxSkin extends SkinBase<TitledPane> implements AeroSkin {
     private Label titleLabel;
     private Rectangle captionBg;
     private Rectangle groupBoxBg;
     private Rectangle clippingRect;
 
-    public final String getTitle(){return titleLabel.getText();}
-    public final void setTitle(String value){titleLabel.setText(value);}
-
-    public AeroGroupBoxSkin(){
-        super();
-        getStyleClass().add("group-box");
+    public AeroGroupBoxSkin(TitledPane p) {
+        super(p);
         titleLabel = new Label("");
+        titleLabel.textProperty().bind(p.textProperty());
         getChildren().add(titleLabel);
         captionBg = new Rectangle();
+        captionBg.setStyle("-fx-fill:red;");
         groupBoxBg = new Rectangle();
         groupBoxBg.setStyle("-fx-fill:transparent;");
         clippingRect = new Rectangle();
         getChildren().add(groupBoxBg);
         groupBoxBg.getStyleClass().add("group-box-border");
-        layoutChildren();   //Shouldn't be called here, but border is only showing up on Mouseover if not called
+        if (p.getContent() != null)
+            getChildren().add(p.getContent());
     }
 
     @Override
-    protected void layoutChildren() {
-        for (Node c : getChildren()){
-            layoutInArea(c, c.getLayoutX(), c.getLayoutY(), c.prefWidth(-1), c.prefHeight(-1), 0, HPos.LEFT, VPos.TOP);
-        }
+    protected void layoutChildren(double x, double y, double w, double h) { //entsprechend lokale vars nehmen
+        super.layoutChildren(x, y, w, h);
 
-        titleLabel.relocate(9, -7);
-        captionBg.setX(titleLabel.getLayoutX()-2);
-        captionBg.setY(titleLabel.getLayoutY());
-        captionBg.setWidth(titleLabel.getWidth()+4);
+        titleLabel.relocate(x + 9, y - 7);
+        captionBg.relocate(titleLabel.getLayoutX() - 2, titleLabel.getLayoutY());
+        captionBg.setWidth(titleLabel.getWidth() + 4);
         captionBg.setHeight(titleLabel.getHeight());
 
-        groupBoxBg.relocate(0, 0);
-        groupBoxBg.setWidth(getPrefWidth());
-        groupBoxBg.setHeight(getPrefHeight());
+        groupBoxBg.relocate(x, y);
+        groupBoxBg.setWidth(w);
+        groupBoxBg.setHeight(h);
 
-        clippingRect.relocate(0, 0);
-        clippingRect.setWidth(getPrefWidth());
-        clippingRect.setHeight(getPrefHeight());
+        clippingRect.relocate(x, y);
+        clippingRect.setWidth(w);
+        clippingRect.setHeight(h);
 
         groupBoxBg.setClip(Rectangle.subtract(clippingRect, captionBg));
+
+        if (getSkinnable().getContent() != null) {
+            getSkinnable().getContent().relocate(x, y);
+            getSkinnable().getContent().resize(w, h);
+        }
+
     }
 }
+
+

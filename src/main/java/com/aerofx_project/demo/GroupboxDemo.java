@@ -31,38 +31,38 @@ package com.aerofx_project.demo;
 
 import com.aerofx_project.AeroFX;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TitledPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import org.scenicview.ScenicView;
 
 /**
- * Created by Matthias on 27.05.2014.
+ * Created by Matthias on 01.07.2014.
  */
-public class SystemSettingsDemo extends Application {
-    /**
-     *
-     * @param primaryStage  The primary Stage
-     * @throws Exception
-     */
+public class GroupboxDemo extends Application{
+
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("SystemSettingsDemo.fxml"));
-        primaryStage.setTitle("Systemeigenschaften (JavaFX)");
-        primaryStage.setResizable(false);
+        Pane root = new StackPane();
+        CheckBox bt = new CheckBox("eieieie");
+        StackPane sp = new StackPane(bt);
+        TitledPane tp = new TitledPane();
         Scene myScene = new Scene(root, 402, 446);
-  //      myScene.getStylesheets().add(getClass().getResource("../win7.css").toExternalForm());
+        tp.setLayoutX(20);
+        tp.setLayoutY(20);
+        tp.setText("foo");
+        tp.setMaxWidth(180);
+        tp.setMaxHeight(150);
+        AeroFX.styleGroupBox(tp);
         AeroFX.style();
-        for(Node n : root.getChildrenUnmodifiable().filtered(node -> node instanceof TitledPane)){
-            AeroFX.styleGroupBox((TitledPane)n);
-            System.out.println("A tp");
-        }
-
+        tp.setContent(sp);
+        root.getChildren().add(tp);
         primaryStage.setScene(myScene);
         primaryStage.show();
-//        ScenicView.show(myScene);
+        //ScenicView.show(myScene);
     }
 }

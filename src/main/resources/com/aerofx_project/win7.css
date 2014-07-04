@@ -411,6 +411,10 @@
 *       GroupBox                            *
 *                                           *
 *********************************************/
+.group-box{
+    -fx-skin: "com.aerofx_project.controls.skin.AeroGroupBoxSkin";
+}
+
 .group-box-border{
     -fx-stroke: rgb(213,223,229);
     -fx-stroke-dash-array: 1 0;

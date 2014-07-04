@@ -30,6 +30,7 @@
 package com.aerofx_project;
 
 import javafx.application.Application;
+import javafx.scene.control.TitledPane;
 
 /**
  * Created by Matthias on 27.05.2014.
@@ -39,5 +40,11 @@ public class AeroFX {
 
     public static void style(){
         Application.setUserAgentStylesheet(AERO_CSS_NAME);
+    }
+
+    public static void styleGroupBox(TitledPane p){
+        p.setCollapsible(false);
+        p.getStyleClass().clear();
+        p.getStyleClass().add("group-box");
     }
 }
