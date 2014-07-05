@@ -86,7 +86,6 @@ public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
         getSkinnable().focusedProperty().addListener(focusTabListener);
 
         armedListener = observable -> {
-
             if (getSkinnable().isArmed()) {
                 resetAnimation();
             } else {
@@ -181,7 +180,6 @@ public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
                         BackgroundFill bgFill = new BackgroundFill(gradient, new CornerRadii(1.0), new Insets(2.0));
                         list.add(bgFill);
 
-//                        getSkinnable().setBackground(new Background(list.get(0), list.get(1), list.get(2)));
                         ((StyleableProperty<Background>)getSkinnable().backgroundProperty()).applyStyle(null, new Background(list.get(0), list.get(1), list.get(2)));
                     }
                 });
