@@ -56,10 +56,6 @@ public class SystemSettingsDemo extends Application {
         Scene myScene = new Scene(root, 402, 446);
   //      myScene.getStylesheets().add(getClass().getResource("../win7.css").toExternalForm());
         AeroFX.style();
-        for(Node n : root.getChildrenUnmodifiable().filtered(node -> node instanceof TitledPane)){
-            AeroFX.styleGroupBox((TitledPane)n);
-            System.out.println("A tp");
-        }
 
         primaryStage.setScene(myScene);
         primaryStage.show();

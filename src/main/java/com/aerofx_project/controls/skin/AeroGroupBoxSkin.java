@@ -72,7 +72,7 @@ public class AeroGroupBoxSkin extends SkinBase<TitledPane> implements AeroSkin {
     }
 
     @Override
-    protected void layoutChildren(double x, double y, double w, double h) { //entsprechend lokale vars nehmen
+    protected void layoutChildren(double x, double y, double w, double h) {
         super.layoutChildren(x, y, w, h);
 
         titleLabel.relocate(x + 9, y - 7);
