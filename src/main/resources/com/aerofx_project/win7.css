@@ -70,14 +70,18 @@
 }
 
 /* mnemonics */
-.button:show-mnemonics .mnemonic-underline,
-.toggle-button:show-mnemonics .mnemonic-underline,
-.radio-button:show-mnemonics .mnemonic-underline,
-.check-box:show-mnemonics .mnemonic-underline,
+.button:show-mnemonics > .mnemonic-underline,
+.toggle-button:show-mnemonics > .mnemonic-underline,
+.radio-button:show-mnemonics > .mnemonic-underline,
+.check-box:show-mnemonics > .mnemonic-underline,
 .hyperlink:show-mnemonics > .mnemonic-underline,
 .split-menu-button:show-mnemonics > .mnemonic-underline,
 .menu-button:show-mnemonics > .mnemonic-underline {
     -fx-stroke: -fx-text-base-color;
+}
+
+.mnemonic-underline{
+    -fx-stroke: transparent;
 }
 
 
