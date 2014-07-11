@@ -116,10 +116,10 @@ public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
     @Override
     protected void layoutChildren(double x, double y, double w, double h) {
         super.layoutChildren(x, y, w, h);
-        focusBorderRect.setX(x + 2);
-        focusBorderRect.setY(y + 2);
-        focusBorderRect.setWidth(w - 4);
-        focusBorderRect.setHeight(h - 4);
+        focusBorderRect.setX(x + 2 - getSkinnable().getPadding().getLeft());
+        focusBorderRect.setY(y + 2 - getSkinnable().getPadding().getTop());
+        focusBorderRect.setWidth(w - 4 + getSkinnable().getPadding().getRight() + getSkinnable().getPadding().getLeft());
+        focusBorderRect.setHeight(h - 4 + getSkinnable().getPadding().getBottom() + getSkinnable().getPadding().getTop());
     }
 
     private void resetAnimation(){
