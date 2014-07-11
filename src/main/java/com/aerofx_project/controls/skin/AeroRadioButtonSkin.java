@@ -101,8 +101,8 @@ public class AeroRadioButtonSkin extends RadioButtonSkin implements AeroSkin {
     protected void layoutChildren(double x, double y, double w, double h) {
         super.layoutChildren(x, y, w, h);
         focusBorderRect.setX(x + 14);
-        focusBorderRect.setY(y);
-        focusBorderRect.setWidth(w-12);
+        focusBorderRect.setY(y+1);
+        focusBorderRect.setWidth(w-18);
         focusBorderRect.setHeight(h);
 
         getSkinnable().lookup(".radio").relocate(0, 3);
