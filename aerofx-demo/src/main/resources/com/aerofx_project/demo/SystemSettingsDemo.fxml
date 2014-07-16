@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!--
+  ~ Copyright (c) 2014, Matthias Meidinger
+  ~ All rights reserved.
+  ~
+  ~ Redistribution and use in source and binary forms, with or without
+  ~ modification, are permitted provided that the following conditions are met:
+  ~
+  ~ 1. Redistributions of source code must retain the above copyright notice, this
+  ~    list of conditions and the following disclaimer.
+  ~ 2. Redistributions in binary form must reproduce the above copyright notice,
+  ~    this list of conditions and the following disclaimer in the documentation
+  ~    and/or other materials provided with the distribution.
+  ~
+  ~ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+  ~ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  ~ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  ~ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+  ~ ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+  ~ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+  ~ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+  ~ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  ~ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+  ~ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  ~
+  ~ The views and conclusions contained in the software and documentation are those
+  ~ of the authors and should not be interpreted as representing official policies,
+  ~ either expressed or implied, of the FreeBSD Project.
+  -->
+
+<?import javafx.scene.image.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="408.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aerofx_project.demo.SystemSettingsDemoController">
+   <children>
+      <TabPane layoutX="6.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="398.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Computername">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="418.0" prefWidth="413.0">
+                     <children>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="14.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                            <image> <Image url="@icons/pc.png" /> </image>
+                         </ImageView>
+                        <Label layoutX="63.0" layoutY="14.0" prefHeight="34.0" prefWidth="357.0" text="Folgende Informationen werden zum Identifizieren des Computers &#10;im Netzwerk verwendet."/>
+                        <Label layoutX="14.0" layoutY="57.0" text="Computerbeschreibung:" />
+                        <TextField layoutX="168.0" layoutY="55.0" prefHeight="20.0" prefWidth="203.0" />
+                        <Label layoutX="165.0" layoutY="80.0" text="Zum Beispiel: &quot;Spielecomputer&quot; oder &#10;&quot;Heikes Computer&quot;" />
+                        <Label layoutX="14.0" layoutY="114.0" text="Vollständiger Computername:" />
+                        <Label layoutX="165.0" layoutY="114.0" text="Home-PC" />
+                        <Label layoutX="14.0" layoutY="140.0" text="Arbeitsgruppe:" />
+                        <Label layoutX="165.0" layoutY="140.0" text="WORKGROUP" />
+                        <Label layoutX="14.0" layoutY="165.0" text="Klicken Sie auf &quot;Netzwerk-ID&quot;, um einer Domäne&#10;oder einer Arbeitsgruppe mithilfe eines Assistenten&#10;beizutreten." />
+                        <Button layoutX="282.0" layoutY="170.0" prefHeight="21.0" prefWidth="88.0" text="Netzwer_k-ID..." />
+                        <Label layoutX="14.0" layoutY="216.0" text="Klicken Sie auf &quot;Ändern&quot;, um diesen Computer&#10;umzubennen oder dessen Domäne oder&#10;Arbeitsgruppe zu ändern." />
+                        <Button layoutX="282.0" layoutY="216.0" prefHeight="21.0" prefWidth="88.0" text="Ä_ndern..." />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Hardware">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                         <TitledPane layoutX="14.0" layoutY="27.0" prefHeight="107.0" prefWidth="363.0" text="Geräte-Manager">
+                             <content>
+                                 <AnchorPane>
+                                    <children>
+                                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                                            <image> <Image url="@icons/manager.png" /> </image>
+                                        </ImageView>
+                                        <Label layoutX="57.0" layoutY="12.0" text="Der Geräte-Manager listet alle auf dem Computer installierten&#10;Hardwaregeräte auf. Verwenden Sie den Geräte-Manager, um&#10;die Eigenschaften eines Gerätes zu ändern." />
+                                        <Button layoutX="138.0" layoutY="74.0" prefHeight="21.0" prefWidth="214.0" text="_Geräte-Manager" />
+                                    </children>
+                                 </AnchorPane>
+                             </content>
+                         </TitledPane>
+                         <TitledPane layoutX="14.0" layoutY="148.0" prefHeight="99.0" prefWidth="363.0" text="Geräteinstallationseinstellungen">
+                             <content><AnchorPane>
+                             <children>
+                                 <!-- ersetzten mit content, darin anchor pane, dann zeug -->
+                                 <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                     <image> <Image url="@icons/checklist.png" /> </image>
+                                 </ImageView>
+                                 <Label layoutX="57.0" layoutY="13.0" text="Wählen Sie aus, ob für Ihre Geräte Treibersoftware und&#10;detaillierte Informationen heruntergeladen werden sollen." />
+                                 <Button layoutX="138.0" layoutY="67.0" prefHeight="21.0" prefWidth="214.0" text="Gerä_teinstallationseinstellungen" />
+                             </children>
+                             </AnchorPane></content>
+                         </TitledPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Erweitert">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="16.0" layoutY="5.0" text="Sie müssen als Administrator angemeldet sein, um diese Änderungen&#10;durchführen zu können." />
+                        <TitledPane layoutX="14.0" layoutY="43.0" prefHeight="79.0" prefWidth="363.0" text="Leistung">
+                            <content><AnchorPane>
+                            <children>
+                                <Label layoutX="10.0" layoutY="12.0" text="Visuelle Effekte, Prozessorzeitplanung, Speichernutzung und virtueller&#10;Speicher" />
+                                <Button layoutX="269.0" layoutY="47.0" prefHeight="21.0" prefWidth="82.0" text="_Einstellungen..." />
+                            </children>
+                            </AnchorPane></content>
+                        </TitledPane>
+                        <TitledPane layoutX="14.0" layoutY="135.0" prefHeight="79.0" prefWidth="363.0" text="Benutzerprofile">
+                            <content><AnchorPane>
+                            <children>
+                                <Label layoutX="10.0" layoutY="12.0" text="Desktopeinstellungen bezüglich der Anmeldung" />
+                                <Button layoutX="269.0" layoutY="47.0" prefHeight="21.0" prefWidth="82.0" text="E_instellungen..." />
+                            </children>
+                            </AnchorPane></content>
+                        </TitledPane>
+                        <TitledPane layoutX="14.0" layoutY="227.0" prefHeight="79.0" prefWidth="363.0" text="Starten und Wiederherstellen">
+                            <content><AnchorPane>
+                            <children>
+                                <Label layoutX="10.0" layoutY="12.0" text="Systemstart, Systemfehler und Debuginformationen" />
+                                <Button layoutX="269.0" layoutY="47.0" prefHeight="21.0" prefWidth="82.0" text="Ei_nstellungen..." />
+                            </children>
+                            </AnchorPane></content>
+                         </TitledPane>
+                        <Button layoutX="250.0" layoutY="320.0" prefHeight="21.0" prefWidth="126.0" text="_Umgebungsvariablen..." />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Computerschutz">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                             <image> <Image url="@icons/pcbackup.png" /> </image>
+                         </ImageView>
+                         <TextFlow layoutX="59.0" layoutY="5.0" prefHeight="62.0" prefWidth="345.0">
+                             <children>
+                                 <Label text="Verwenden Sie den Computerschutz, um unerwünschte&#10;Systemänderungen rückgängig zu machen und vorherige&#10;Versionen von Dateien wiederherzustellen." />
+                                 <Hyperlink text="Was ist der Computerschutz?" />
+                             </children>
+                         </TextFlow>
+                        <Label layoutX="14.0" layoutY="80.0" text="Systemwiederherstellung" />
+                         <Separator layoutX="156.0" layoutY="87.0" prefWidth="212.0" />
+                         <Label layoutX="24.0" layoutY="93.0" text="Sie können unerwünschte&#10;Systemänderungen rückgängig machen,&#10;indem Sie den Computer auf einen&#10;vorherigen Wiederherstellungspunkt&#10;zurücksetzen." />
+                         <Button layoutX="232.0" layoutY="103.0" prefHeight="21.0" prefWidth="138.0" text="_Systemwiederherstellung..." />
+
+                         <Label layoutX="14.0" layoutY="171.0" text="Schutzeinstellungen" />
+                         <Separator layoutX="142.0" layoutY="178.0" prefWidth="227.0" />
+                         <TableView layoutX="24.0" layoutY="190.0" prefHeight="81.0" prefWidth="341.0">
+                             <columns>
+                                 <TableColumn prefWidth="229.0" text="Verfügbare Laufwerke" />
+                                 <TableColumn minWidth="0.0" prefWidth="128.0" text="Schutz" />
+                             </columns>
+                         </TableView>
+                         <Label layoutX="24.0" layoutY="277.0" text="Konfigurieren Sie Wiederherstellungs-&#10;einstellungen, verwalten Sie den Speicherplatz,&#10;und löschen Sie Wiederherstellungspunkte."/>
+                         <Button layoutX="267.0" layoutY="287.0" prefHeight="21.0" prefWidth="103.0" text="K_onfigurieren..." />
+                         <Label layoutX="24.0" layoutY="340.0" text="Dient zum sofortigen Erstellen eines&#10;Wiederherstellungspunktes für die Laufwerke mit&#10;aktiviertem Systemschutz." />
+                        <Button layoutX="267.0" layoutY="343.0" prefHeight="21.0" prefWidth="103.0" text="_Erstellen..." />
+
+
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Remote">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="392.0" prefWidth="390.0">
+                     <children>
+                        <TitledPane layoutX="12.0" layoutY="17.0" prefHeight="117.0" prefWidth="366.0" text="Remoteunterstützung">
+                            <content><AnchorPane>
+                            <children>
+                                <CheckBox layoutX="7.0" layoutY="25.0" text="_Remoteunterstützungsverbindungen mit diesem Computer zulassen" />
+                                <Hyperlink layoutX="7.0" layoutY="53.0" text="Was geschieht, wenn Remoteunterstützung aktiviert&#10;ist?" underline="true" />
+                                <Button layoutX="261.0" layoutY="83.0" prefHeight="21.0" prefWidth="91.0" text="_Erweitert..." />
+                            </children>
+                            </AnchorPane></content>
+                        </TitledPane>
+                        <TitledPane layoutX="12.0" layoutY="148.0" prefHeight="208.0" prefWidth="366.0" text="Remotedesktop">
+                            <content><AnchorPane>
+                            <children>
+                                <Label layoutX="9.0" layoutY="19.0" text="Klicken Sie auf eine Option und geben Sie ggf. anschließen an, wer&#10;eine Verbindung herstellen darf." />
+                                <RadioButton layoutX="9.0" layoutY="53.0" selected="true" text="_Keine Verbindung mit diesem Computer zulassen">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="Select1" />
+                                    </toggleGroup>
+                                </RadioButton>
+                                <RadioButton focusTraversable="false" layoutX="9.0" layoutY="82.0" text="_Verbindungen von Computern zulassen, auf denen eine beliebige&#10;Version von Remotedesktop ausgeführt wird (weniger Sicherheit)" toggleGroup="$Select1" />
+                                <RadioButton focusTraversable="false" layoutX="9.0" layoutY="134.0" text="Verbi_ndungen nur von Computern zulassen, auf denen Remotedesktop&#10;mit Authentifizierung auf Netzwerkebene ausgeführt wird (höhere&#10;Sicherheit)" toggleGroup="$Select1" />
+                                <Hyperlink layoutX="5.0" layoutY="177.0" text="Entscheidungshilfe" underline="true" />
+                                <Button layoutX="222.0" layoutY="175.0" prefHeight="21.0" prefWidth="133.0" text="Benutzer a_uswählen..." />
+                            </children>
+                            </AnchorPane></content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Button layoutX="171.0" layoutY="427.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="73.0" text="OK" />
+      <Button layoutX="252.0" layoutY="427.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="73.0" text="Abbrechen" />
+      <Button disable="true" layoutX="333.0" layoutY="427.0" prefHeight="21.0" prefWidth="73.0" text="Ü_bernehmen" />
+   </children>
+</AnchorPane>
