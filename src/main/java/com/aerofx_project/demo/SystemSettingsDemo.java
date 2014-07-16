@@ -32,12 +32,9 @@ package com.aerofx_project.demo;
 import com.aerofx_project.AeroFX;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TitledPane;
 import javafx.stage.Stage;
-import org.scenicview.ScenicView;
 
 /**
  * Created by Matthias on 27.05.2014.
@@ -54,11 +51,11 @@ public class SystemSettingsDemo extends Application {
         primaryStage.setTitle("Systemeigenschaften (JavaFX)");
         primaryStage.setResizable(false);
         Scene myScene = new Scene(root, 402, 446);
-  //      myScene.getStylesheets().add(getClass().getResource("../win7.css").toExternalForm());
+
         AeroFX.style();
+        AeroFX.styleAllAsGroupbox(root);
 
         primaryStage.setScene(myScene);
         primaryStage.show();
-//        ScenicView.show(myScene);
     }
 }

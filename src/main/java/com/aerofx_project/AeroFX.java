@@ -30,6 +30,10 @@
 package com.aerofx_project;
 
 import javafx.application.Application;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 import javafx.scene.control.TitledPane;
 
 /**
@@ -43,8 +47,25 @@ public class AeroFX {
     }
 
     public static void styleGroupBox(TitledPane p){
-        p.setCollapsible(false);
         p.getStyleClass().clear();
         p.getStyleClass().add("group-box");
+    }
+
+    public static void styleAllAsGroupbox(Parent p){
+            for(Node a : p.getChildrenUnmodifiable()){
+                if(a instanceof TitledPane) {
+                    styleGroupBox((TitledPane) a);
+                } else if(a instanceof TabPane) {
+                    for(Tab t : ((TabPane)a).getTabs()) {
+                        Node content = t.getContent();
+                        if(content != null && content instanceof Parent) {
+                            styleAllAsGroupbox((Parent) content);
+                        }
+                    }
+                }
+                else if(a instanceof Parent) {
+                    styleAllAsGroupbox((Parent) a);
+                }
+            }
     }
 }

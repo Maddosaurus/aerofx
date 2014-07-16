@@ -32,6 +32,7 @@ package com.aerofx_project.controls.skin;
 import com.sun.javafx.css.converters.StringConverter;
 import javafx.css.*;
 import javafx.geometry.HPos;
+import javafx.geometry.Insets;
 import javafx.geometry.VPos;
 import javafx.scene.Node;
 import javafx.scene.control.Control;
@@ -61,6 +62,7 @@ public class AeroGroupBoxSkin extends SkinBase<TitledPane> implements AeroSkin {
         titleLabel.textProperty().bind(p.textProperty());
         getChildren().add(titleLabel);
         captionBg = new Rectangle();
+        p.setCollapsible(false);
         captionBg.setStyle("-fx-fill:red;");
         groupBoxBg = new Rectangle();
         groupBoxBg.setStyle("-fx-fill:transparent;");
@@ -69,24 +71,25 @@ public class AeroGroupBoxSkin extends SkinBase<TitledPane> implements AeroSkin {
         groupBoxBg.getStyleClass().add("group-box-border");
         if (p.getContent() != null)
             getChildren().add(p.getContent());
+        p.setPadding(new Insets(7, 0, 0, 0));
     }
 
     @Override
     protected void layoutChildren(double x, double y, double w, double h) {
         super.layoutChildren(x, y, w, h);
 
-        titleLabel.relocate(x + 9, y - 7);
-        captionBg.relocate(titleLabel.getLayoutX() - 2, titleLabel.getLayoutY());
-        captionBg.setWidth(titleLabel.getWidth() + 4);
+        titleLabel.relocate(x + 9, y );
+        captionBg.relocate(7, -7);
+        captionBg.setWidth(titleLabel.getWidth()+4);
         captionBg.setHeight(titleLabel.getHeight());
 
-        groupBoxBg.relocate(x, y);
+        groupBoxBg.relocate(x, y + 7);
         groupBoxBg.setWidth(w);
-        groupBoxBg.setHeight(h);
+        groupBoxBg.setHeight(h - 7);
 
-        clippingRect.relocate(x, y);
-        clippingRect.setWidth(w);
-        clippingRect.setHeight(h);
+        clippingRect.relocate(0, 0);
+        clippingRect.setWidth(groupBoxBg.getWidth());
+        clippingRect.setHeight(groupBoxBg.getHeight());
 
         groupBoxBg.setClip(Rectangle.subtract(clippingRect, captionBg));
 
