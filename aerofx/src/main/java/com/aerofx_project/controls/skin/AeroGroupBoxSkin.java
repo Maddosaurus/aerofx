@@ -78,7 +78,7 @@ public class AeroGroupBoxSkin extends SkinBase<TitledPane> implements AeroSkin {
     protected void layoutChildren(double x, double y, double w, double h) {
         super.layoutChildren(x, y, w, h);
 
-        titleLabel.relocate(x + 9, y );
+        titleLabel.relocate(x + 9, y +1);
         captionBg.relocate(7, -7);
         captionBg.setWidth(titleLabel.getWidth()+4);
         captionBg.setHeight(titleLabel.getHeight());

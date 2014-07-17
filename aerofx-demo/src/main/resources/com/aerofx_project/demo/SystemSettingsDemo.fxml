@@ -65,28 +65,27 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                         <TitledPane layoutX="14.0" layoutY="27.0" prefHeight="107.0" prefWidth="363.0" text="Geräte-Manager">
+                         <TitledPane layoutX="14.0" layoutY="12.0" prefHeight="121.0" prefWidth="363.0" text="Geräte-Manager">
                              <content>
                                  <AnchorPane>
                                     <children>
-                                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="10.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                                             <image> <Image url="@icons/manager.png" /> </image>
                                         </ImageView>
-                                        <Label layoutX="57.0" layoutY="12.0" text="Der Geräte-Manager listet alle auf dem Computer installierten&#10;Hardwaregeräte auf. Verwenden Sie den Geräte-Manager, um&#10;die Eigenschaften eines Gerätes zu ändern." />
-                                        <Button layoutX="138.0" layoutY="74.0" prefHeight="21.0" prefWidth="214.0" text="_Geräte-Manager" />
+                                        <Label layoutX="57.0" layoutY="20.0" text="Der Geräte-Manager listet alle auf dem Computer installierten&#10;Hardwaregeräte auf. Verwenden Sie den Geräte-Manager, um&#10;die Eigenschaften eines Gerätes zu ändern." />
+                                        <Button layoutX="138.0" layoutY="81.0" prefHeight="21.0" prefWidth="214.0" text="_Geräte-Manager" />
                                     </children>
                                  </AnchorPane>
                              </content>
                          </TitledPane>
-                         <TitledPane layoutX="14.0" layoutY="148.0" prefHeight="99.0" prefWidth="363.0" text="Geräteinstallationseinstellungen">
+                         <TitledPane layoutX="14.0" layoutY="133.0" prefHeight="113.0" prefWidth="363.0" text="Geräteinstallationseinstellungen">
                              <content><AnchorPane>
                              <children>
-                                 <!-- ersetzten mit content, darin anchor pane, dann zeug -->
-                                 <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="10.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
                                      <image> <Image url="@icons/checklist.png" /> </image>
                                  </ImageView>
-                                 <Label layoutX="57.0" layoutY="13.0" text="Wählen Sie aus, ob für Ihre Geräte Treibersoftware und&#10;detaillierte Informationen heruntergeladen werden sollen." />
-                                 <Button layoutX="138.0" layoutY="67.0" prefHeight="21.0" prefWidth="214.0" text="Gerä_teinstallationseinstellungen" />
+                                 <Label layoutX="57.0" layoutY="21.0" text="Wählen Sie aus, ob für Ihre Geräte Treibersoftware und&#10;detaillierte Informationen heruntergeladen werden sollen." />
+                                 <Button layoutX="138.0" layoutY="74.0" prefHeight="21.0" prefWidth="214.0" text="Gerä_teinstallationseinstellungen" />
                              </children>
                              </AnchorPane></content>
                          </TitledPane>
@@ -98,28 +97,28 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="16.0" layoutY="5.0" text="Sie müssen als Administrator angemeldet sein, um diese Änderungen&#10;durchführen zu können." />
-                        <TitledPane layoutX="14.0" layoutY="43.0" prefHeight="79.0" prefWidth="363.0" text="Leistung">
+                        <Label layoutX="16.0" layoutY="7.0" text="Sie müssen als Administrator angemeldet sein, um diese Änderungen&#10;durchführen zu können." />
+                        <TitledPane layoutX="14.0" layoutY="28.0" prefHeight="93.0" prefWidth="363.0" text="Leistung">
                             <content><AnchorPane>
                             <children>
-                                <Label layoutX="10.0" layoutY="12.0" text="Visuelle Effekte, Prozessorzeitplanung, Speichernutzung und virtueller&#10;Speicher" />
-                                <Button layoutX="269.0" layoutY="47.0" prefHeight="21.0" prefWidth="82.0" text="_Einstellungen..." />
+                                <Label layoutX="10.0" layoutY="20.0" text="Visuelle Effekte, Prozessorzeitplanung, Speichernutzung und virtueller&#10;Speicher" />
+                                <Button layoutX="269.0" layoutY="54.0" prefHeight="21.0" prefWidth="82.0" text="_Einstellungen..." />
                             </children>
                             </AnchorPane></content>
                         </TitledPane>
-                        <TitledPane layoutX="14.0" layoutY="135.0" prefHeight="79.0" prefWidth="363.0" text="Benutzerprofile">
+                        <TitledPane layoutX="14.0" layoutY="120.0" prefHeight="93.0" prefWidth="363.0" text="Benutzerprofile">
                             <content><AnchorPane>
                             <children>
-                                <Label layoutX="10.0" layoutY="12.0" text="Desktopeinstellungen bezüglich der Anmeldung" />
-                                <Button layoutX="269.0" layoutY="47.0" prefHeight="21.0" prefWidth="82.0" text="E_instellungen..." />
+                                <Label layoutX="10.0" layoutY="21.0" text="Desktopeinstellungen bezüglich der Anmeldung" />
+                                <Button layoutX="269.0" layoutY="54.0" prefHeight="21.0" prefWidth="82.0" text="E_instellungen..." />
                             </children>
                             </AnchorPane></content>
                         </TitledPane>
-                        <TitledPane layoutX="14.0" layoutY="227.0" prefHeight="79.0" prefWidth="363.0" text="Starten und Wiederherstellen">
+                        <TitledPane layoutX="14.0" layoutY="213.0" prefHeight="93.0" prefWidth="363.0" text="Starten und Wiederherstellen">
                             <content><AnchorPane>
                             <children>
-                                <Label layoutX="10.0" layoutY="12.0" text="Systemstart, Systemfehler und Debuginformationen" />
-                                <Button layoutX="269.0" layoutY="47.0" prefHeight="21.0" prefWidth="82.0" text="Ei_nstellungen..." />
+                                <Label layoutX="10.0" layoutY="21.0" text="Systemstart, Systemfehler und Debuginformationen" />
+                                <Button layoutX="269.0" layoutY="54" prefHeight="21.0" prefWidth="82.0" text="Ei_nstellungen..." />
                             </children>
                             </AnchorPane></content>
                          </TitledPane>
@@ -168,28 +167,28 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="392.0" prefWidth="390.0">
                      <children>
-                        <TitledPane layoutX="12.0" layoutY="17.0" prefHeight="117.0" prefWidth="366.0" text="Remoteunterstützung">
+                        <TitledPane layoutX="12.0" layoutY="2.0" prefHeight="131.0" prefWidth="366.0" text="Remoteunterstützung">
                             <content><AnchorPane>
                             <children>
-                                <CheckBox layoutX="7.0" layoutY="25.0" text="_Remoteunterstützungsverbindungen mit diesem Computer zulassen" />
-                                <Hyperlink layoutX="7.0" layoutY="53.0" text="Was geschieht, wenn Remoteunterstützung aktiviert&#10;ist?" underline="true" />
-                                <Button layoutX="261.0" layoutY="83.0" prefHeight="21.0" prefWidth="91.0" text="_Erweitert..." />
+                                <CheckBox layoutX="7.0" layoutY="32.0" text="_Remoteunterstützungsverbindungen mit diesem Computer zulassen" />
+                                <Hyperlink layoutX="7.0" layoutY="64.0" text="Was geschieht, wenn Remoteunterstützung aktiviert&#10;ist?" underline="true" />
+                                <Button layoutX="261.0" layoutY="90.0" prefHeight="21.0" prefWidth="91.0" text="_Erweitert..." />
                             </children>
                             </AnchorPane></content>
                         </TitledPane>
-                        <TitledPane layoutX="12.0" layoutY="148.0" prefHeight="208.0" prefWidth="366.0" text="Remotedesktop">
+                        <TitledPane layoutX="12.0" layoutY="132.0" prefHeight="222.0" prefWidth="366.0" text="Remotedesktop">
                             <content><AnchorPane>
                             <children>
-                                <Label layoutX="9.0" layoutY="19.0" text="Klicken Sie auf eine Option und geben Sie ggf. anschließen an, wer&#10;eine Verbindung herstellen darf." />
-                                <RadioButton layoutX="9.0" layoutY="53.0" selected="true" text="_Keine Verbindung mit diesem Computer zulassen">
+                                <Label layoutX="9.0" layoutY="27.0" text="Klicken Sie auf eine Option und geben Sie ggf. anschließen an, wer&#10;eine Verbindung herstellen darf." />
+                                <RadioButton layoutX="9.0" layoutY="60.0" selected="true" text="_Keine Verbindung mit diesem Computer zulassen">
                                     <toggleGroup>
                                         <ToggleGroup fx:id="Select1" />
                                     </toggleGroup>
                                 </RadioButton>
-                                <RadioButton focusTraversable="false" layoutX="9.0" layoutY="82.0" text="_Verbindungen von Computern zulassen, auf denen eine beliebige&#10;Version von Remotedesktop ausgeführt wird (weniger Sicherheit)" toggleGroup="$Select1" />
-                                <RadioButton focusTraversable="false" layoutX="9.0" layoutY="134.0" text="Verbi_ndungen nur von Computern zulassen, auf denen Remotedesktop&#10;mit Authentifizierung auf Netzwerkebene ausgeführt wird (höhere&#10;Sicherheit)" toggleGroup="$Select1" />
-                                <Hyperlink layoutX="5.0" layoutY="177.0" text="Entscheidungshilfe" underline="true" />
-                                <Button layoutX="222.0" layoutY="175.0" prefHeight="21.0" prefWidth="133.0" text="Benutzer a_uswählen..." />
+                                <RadioButton focusTraversable="false" layoutX="9.0" layoutY="89.0" text="_Verbindungen von Computern zulassen, auf denen eine beliebige&#10;Version von Remotedesktop ausgeführt wird (weniger Sicherheit)" toggleGroup="$Select1" />
+                                <RadioButton focusTraversable="false" layoutX="9.0" layoutY="141.0" text="Verbi_ndungen nur von Computern zulassen, auf denen Remotedesktop&#10;mit Authentifizierung auf Netzwerkebene ausgeführt wird (höhere&#10;Sicherheit)" toggleGroup="$Select1" />
+                                <Hyperlink layoutX="9.0" layoutY="190.0" text="Entscheidungshilfe" underline="true" />
+                                <Button layoutX="222.0" layoutY="184.0" prefHeight="21.0" prefWidth="133.0" text="Benutzer a_uswählen..." />
                             </children>
                             </AnchorPane></content>
                         </TitledPane>
