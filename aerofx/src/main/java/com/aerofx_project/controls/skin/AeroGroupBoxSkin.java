@@ -48,7 +48,9 @@ import java.util.List;
 
 
 /**
- * Created by Matthias on 12.06.2014.
+ * Custom implementation of a JavaFX-TitledPane to mimic a Windows-like GroupBox
+ *
+ * @author Matthias Meidinger
  */
 public class AeroGroupBoxSkin extends SkinBase<TitledPane> implements AeroSkin {
     private Label titleLabel;
@@ -56,6 +58,11 @@ public class AeroGroupBoxSkin extends SkinBase<TitledPane> implements AeroSkin {
     private Rectangle groupBoxBg;
     private Rectangle clippingRect;
 
+    /**
+     * Takes a TitledPane, styles it as GroupBox and binds the textProperty to the title.
+     * The border can be style via the CSS-class <code>group-box-border</code>
+     * @param p Pane to be styled
+     */
     public AeroGroupBoxSkin(TitledPane p) {
         super(p);
         titleLabel = new Label("");
@@ -63,7 +70,7 @@ public class AeroGroupBoxSkin extends SkinBase<TitledPane> implements AeroSkin {
         getChildren().add(titleLabel);
         captionBg = new Rectangle();
         p.setCollapsible(false);
-        captionBg.setStyle("-fx-fill:red;");
+        captionBg.setStyle("-fx-fill:transparent;");
         groupBoxBg = new Rectangle();
         groupBoxBg.setStyle("-fx-fill:transparent;");
         clippingRect = new Rectangle();
@@ -74,6 +81,10 @@ public class AeroGroupBoxSkin extends SkinBase<TitledPane> implements AeroSkin {
         p.setPadding(new Insets(7, 0, 0, 0));
     }
 
+    /**
+     * Override to have full control over layout.
+     * The background has a clip, as the border otherwise would cut through the title text.
+     */
     @Override
     protected void layoutChildren(double x, double y, double w, double h) {
         super.layoutChildren(x, y, w, h);

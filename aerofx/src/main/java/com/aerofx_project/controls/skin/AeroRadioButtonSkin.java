@@ -43,7 +43,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
 /**
- * Created by Matthias on 10.06.2014.
+ * Custom implementation of the RadioButtonSkin-class
  */
 public class AeroRadioButtonSkin extends RadioButtonSkin implements AeroSkin {
     /**
@@ -60,6 +60,12 @@ public class AeroRadioButtonSkin extends RadioButtonSkin implements AeroSkin {
     private ChangeListener<? super Toggle> focusTraverseListener;
     private EventHandler<KeyEvent> keyListener;
 
+    /**
+     * Constructor that sets up all additional elements.
+     * The key listener mimics the Windows-platform function to switch between toggles in a toggle group by using the arrow keys.
+     * The focus border can be styled via the CSS-class <code>radio-button-focus-border</code>.
+     * @param radioButton
+     */
     public AeroRadioButtonSkin(RadioButton radioButton) {
         super(radioButton);
 
@@ -97,6 +103,9 @@ public class AeroRadioButtonSkin extends RadioButtonSkin implements AeroSkin {
         getSkinnable().setOnKeyPressed(keyListener);
     }
 
+    /**
+     * Override to layout and resize the focus border.
+     */
     @Override
     protected void layoutChildren(double x, double y, double w, double h) {
         super.layoutChildren(x, y, w, h);
@@ -108,6 +117,9 @@ public class AeroRadioButtonSkin extends RadioButtonSkin implements AeroSkin {
         getSkinnable().lookup(".radio").relocate(0, 3);
     }
 
+    /**
+     * Unregisters all listeners
+     */
     @Override
     public void dispose() {
         super.dispose();

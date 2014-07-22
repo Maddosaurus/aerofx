@@ -37,13 +37,19 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
 /**
- * Created by Matthias on 10.06.2014.
+ * Custom implementation of the CheckBoxSkin-class
+ *
+ * @author Matthias Medinger
  */
 public class AeroCheckBoxSkin extends CheckBoxSkin implements AeroSkin {
 
     private Rectangle focusBorderRect;
     private InvalidationListener focusBorderListener;
 
+    /**
+     * Sets up a CheckBox with a Windows-style dotted focus border.
+     * This border is styled by the CSS-class <code>check-box-focus-border</code>
+     */
     public AeroCheckBoxSkin(CheckBox checkbox) {
         super(checkbox);
         focusBorderRect = new Rectangle(0,0, Color.TRANSPARENT);
@@ -54,6 +60,9 @@ public class AeroCheckBoxSkin extends CheckBoxSkin implements AeroSkin {
         getSkinnable().focusedProperty().addListener(focusBorderListener);
     }
 
+    /**
+     * Override of layoutChildren to resize and position the focus rectangle
+     */
     @Override
     protected void layoutChildren(double x, double y, double w, double h) {
         super.layoutChildren(x, y, w, h);
@@ -63,6 +72,9 @@ public class AeroCheckBoxSkin extends CheckBoxSkin implements AeroSkin {
         focusBorderRect.setHeight(h-2);
     }
 
+    /**
+     * Deregisters all listeners
+     */
     @Override
     public void dispose() {
         super.dispose();

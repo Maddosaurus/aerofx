@@ -33,7 +33,6 @@ import com.sun.javafx.scene.control.skin.ButtonSkin;
 import javafx.animation.Animation;
 import javafx.animation.Timeline;
 import javafx.beans.InvalidationListener;
-import javafx.beans.Observable;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.css.StyleableProperty;
@@ -56,7 +55,9 @@ import java.util.List;
 
 
 /**
- * Created by Matthias on 10.06.2014.
+ * Custom implementation of the ButtonSkin-class
+ *
+ * @author Matthias Meidinger
  */
 public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
 
@@ -68,6 +69,12 @@ public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
     private InvalidationListener armedListener;
     private InvalidationListener hoverListener;
 
+    /**
+     * Constructor that sets up all extra work.
+     * It adds a focusRectangle to mimic the Windows-like dotted focus border,
+     * as well as a transition for a pulsing background color when button is focused or hover.
+     * The border is styled by the CSS-class <code>button-focus-border</code>
+     */
     public AeroButtonSkin(Button button) {
         super(button);
         focusBorderRect = new Rectangle(0,0, Color.TRANSPARENT);
@@ -113,6 +120,9 @@ public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
         getSkinnable().hoverProperty().addListener(hoverListener);
     }
 
+    /**
+     * Override of layoutChildren to resize and position the focus rectangle
+     */
     @Override
     protected void layoutChildren(double x, double y, double w, double h) {
         super.layoutChildren(x, y, w, h);
@@ -122,11 +132,23 @@ public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
         focusBorderRect.setHeight(h - 4 + getSkinnable().getPadding().getBottom() + getSkinnable().getPadding().getTop());
     }
 
+    /**
+     * Resets the animation cycle of the button when called
+     */
     private void resetAnimation(){
         focusedButtonTransition.stop();
         getSkinnable().impl_reapplyCSS();
     }
 
+    /**
+     * Sets the animation that produces a pulsing button-background.
+     * Fine-tuning can be done by changing the main values:
+     * <ul>
+     *     <li>duration - Time, a single cycle takes</li>
+     *     <li>startColor 1-4 - Colors of the gradient at cycle start</li>
+     *     <li>endColor 1-4 - Colors of the gradient at cycle end</li>
+     * </ul>
+     */
     private void setFocusedButtonAnimation(){
         if(!getSkinnable().isDisabled()){
             if(focusedButtonTransition != null && focusedButtonTransition.getStatus() == Animation.Status.RUNNING)
@@ -187,6 +209,9 @@ public class AeroButtonSkin extends ButtonSkin implements AeroSkin {
         }
     }
 
+    /**
+     * Deregisters all listeners
+     */
     public void dispose() {
         super.dispose();
         getSkinnable().focusedProperty().removeListener(focusTabListener);

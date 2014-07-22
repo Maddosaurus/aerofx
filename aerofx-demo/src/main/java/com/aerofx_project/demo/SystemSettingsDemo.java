@@ -53,7 +53,7 @@ public class SystemSettingsDemo extends Application {
         Scene myScene = new Scene(root, 402, 446);
 
         AeroFX.style();
-        AeroFX.styleAllAsGroupbox(root);
+        AeroFX.styleAllAsGroupBox(root);
 
         primaryStage.setScene(myScene);
         primaryStage.show();

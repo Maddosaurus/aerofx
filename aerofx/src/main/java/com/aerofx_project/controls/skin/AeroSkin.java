@@ -30,6 +30,6 @@
 package com.aerofx_project.controls.skin;
 
 /**
- * Created by Matthias on 10.06.2014.
+ * Interface from which all AeroFX skin classes should derive
  */
 public interface AeroSkin {}
