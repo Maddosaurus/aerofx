@@ -27,13 +27,12 @@
  * either expressed or implied, of the FreeBSD Project.
  */
 
-package com.aerofx_project.controls.skin;
+package org.aerofx.controls.skin;
 
 import com.sun.javafx.scene.control.skin.RadioButtonSkin;
 import javafx.beans.InvalidationListener;
 import javafx.beans.value.ChangeListener;
 import javafx.event.EventHandler;
-import javafx.geometry.Pos;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleGroup;

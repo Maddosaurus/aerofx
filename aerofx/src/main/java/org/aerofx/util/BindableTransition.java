@@ -1,4 +1,4 @@
-package com.aerofx_project.util;
+package org.aerofx.util;
 
 import javafx.animation.Transition;
 import javafx.beans.property.DoubleProperty;

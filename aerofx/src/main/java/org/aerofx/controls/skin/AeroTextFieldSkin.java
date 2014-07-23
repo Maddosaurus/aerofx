@@ -27,16 +27,14 @@
  * either expressed or implied, of the FreeBSD Project.
  */
 
-package com.aerofx_project.controls.skin;
+package org.aerofx.controls.skin;
 
-import com.sun.javafx.scene.control.skin.TabPaneSkin;
-import javafx.scene.control.TabPane;
+import com.sun.javafx.scene.control.skin.TextFieldSkin;
+import javafx.scene.control.TextField;
 
-/**
- * Created by Matthias on 10.06.2014.
- */
-public class AeroTabPaneSkin extends TabPaneSkin implements AeroSkin {
-    public AeroTabPaneSkin(TabPane tabPane) {
-        super(tabPane);
+public class AeroTextFieldSkin extends TextFieldSkin implements AeroSkin {
+
+    public AeroTextFieldSkin(TextField textField) {
+        super(textField);
     }
 }

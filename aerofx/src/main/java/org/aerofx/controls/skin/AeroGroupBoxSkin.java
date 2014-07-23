@@ -27,24 +27,13 @@
  * either expressed or implied, of the FreeBSD Project.
  */
 
-package com.aerofx_project.controls.skin;
+package org.aerofx.controls.skin;
 
-import com.sun.javafx.css.converters.StringConverter;
-import javafx.css.*;
-import javafx.geometry.HPos;
 import javafx.geometry.Insets;
-import javafx.geometry.VPos;
-import javafx.scene.Node;
-import javafx.scene.control.Control;
 import javafx.scene.control.Label;
 import javafx.scene.control.SkinBase;
 import javafx.scene.control.TitledPane;
-import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Rectangle;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 
 /**

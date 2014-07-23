@@ -27,18 +27,15 @@
 * either expressed or implied, of the FreeBSD Project.
 */
 
-package com.aerofx_project.demo;
+package org.aerofx.demo;
 
-import com.aerofx_project.AeroFX;
+import org.aerofx.AeroFX;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-/**
- * Created by Matthias on 28.05.2014.
- */
 public class Tester extends Application {
 
     @Override
@@ -47,6 +44,7 @@ public class Tester extends Application {
         primaryStage.setTitle("Some random Tester");
         Scene myScene = new Scene(root, 300, 200);
         AeroFX.style();
+        AeroFX.styleAllAsGroupBox(root);
         primaryStage.setScene(myScene);
         primaryStage.show();
     }

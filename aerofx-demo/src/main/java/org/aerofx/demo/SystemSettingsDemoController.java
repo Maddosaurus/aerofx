@@ -27,17 +27,7 @@
  * either expressed or implied, of the FreeBSD Project.
  */
 
-package com.aerofx_project.controls.skin;
+package org.aerofx.demo;
 
-import com.sun.javafx.scene.control.skin.TextFieldSkin;
-import javafx.scene.control.TextField;
-
-/**
- * Created by Matthias on 10.06.2014.
- */
-public class AeroTextFieldSkin extends TextFieldSkin implements AeroSkin {
-
-    public AeroTextFieldSkin(TextField textField) {
-        super(textField);
-    }
+public class SystemSettingsDemoController {
 }

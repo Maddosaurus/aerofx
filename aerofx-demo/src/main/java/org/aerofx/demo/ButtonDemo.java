@@ -27,9 +27,27 @@
  * either expressed or implied, of the FreeBSD Project.
  */
 
-package com.aerofx_project.controls.skin;
+package org.aerofx.demo;
 
-/**
- * Interface from which all AeroFX skin classes should derive
- */
-public interface AeroSkin {}
+import org.aerofx.AeroFX;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+
+public class ButtonDemo extends Application {
+    public void start(Stage primaryStage) throws Exception {
+        Pane root = new StackPane();
+        Button bt = new Button("OK");
+        bt.setPrefHeight(200);
+        bt.setPrefWidth(300);
+        Button b2t = new Button("OK");
+        AeroFX.style();
+        root.getChildren().add(bt);
+        root.getChildren().add(b2t);
+        primaryStage.setScene(new Scene(root, 300, 300));
+        primaryStage.show();
+    }
+}

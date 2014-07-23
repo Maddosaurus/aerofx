@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
-
 <!--
   ~ Copyright (c) 2014, Matthias Meidinger
   ~ All rights reserved.
@@ -33,7 +29,8 @@
   ~ either expressed or implied, of the FreeBSD Project.
   -->
 
-<?import com.aerofx_project.controls.skin.AeroGroupBoxSkin?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button layoutX="25.0" layoutY="23.0" prefHeight="21.0" prefWidth="60.0" mnemonicParsing="false" text="Button" />
@@ -48,11 +45,13 @@
       <RadioButton layoutX="193.0" layoutY="122.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$one" />
       <CheckBox disable="true" layoutX="193.0" layoutY="54.0" mnemonicParsing="false" text="CheckBox" />
       <RadioButton disable="true" layoutX="193.0" layoutY="152.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$one" />
-      <AeroGroupBoxSkin layoutX="25.0" layoutY="140.0" prefHeight="50.0" prefWidth="70.0" title="Untitled">
+      <TitledPane layoutX="25.0" layoutY="140.0" prefHeight="50.0" prefWidth="70.0" text="Untitled">
+       <content><AnchorPane>
           <children>
               <Button layoutX="25.0" layoutY="23.0" prefHeight="21.0" prefWidth="60.0" mnemonicParsing="false" text="Child" />
           </children>
-       </AeroGroupBoxSkin>
+       </AnchorPane></content>
+      </TitledPane>
 
    </children>
 </AnchorPane>

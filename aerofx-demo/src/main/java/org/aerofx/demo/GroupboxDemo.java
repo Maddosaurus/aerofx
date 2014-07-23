@@ -27,30 +27,37 @@
  * either expressed or implied, of the FreeBSD Project.
  */
 
-package com.aerofx_project.demo;
+package org.aerofx.demo;
 
-import com.aerofx_project.AeroFX;
+import org.aerofx.AeroFX;
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.TitledPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-/**
- * Created by Matthias on 01.07.2014.
- */
-public class ButtonDemo extends Application {
+public class GroupboxDemo extends Application{
+
+    @Override
     public void start(Stage primaryStage) throws Exception {
         Pane root = new StackPane();
-        Button bt = new Button("OK");
-        bt.setPrefHeight(200);
-        bt.setPrefWidth(300);
-        Button b2t = new Button("OK");
+        CheckBox bt = new CheckBox("eieieie");
+        StackPane sp = new StackPane(bt);
+        TitledPane tp = new TitledPane();
+        Scene myScene = new Scene(root, 402, 446);
+        tp.setLayoutX(20);
+        tp.setLayoutY(20);
+        tp.setText("foo");
+        tp.setMaxWidth(180);
+        tp.setMaxHeight(150);
+        AeroFX.styleGroupBox(tp);
         AeroFX.style();
-        root.getChildren().add(bt);
-        root.getChildren().add(b2t);
-        primaryStage.setScene(new Scene(root, 300, 300));
+        tp.setContent(sp);
+        root.getChildren().add(tp);
+        primaryStage.setScene(myScene);
         primaryStage.show();
+        //ScenicView.show(myScene);
     }
 }

@@ -101,7 +101,7 @@
 }
 
 .button{
-    -fx-skin:"com.aerofx_project.controls.skin.AeroButtonSkin";
+    -fx-skin:"org.aerofx.controls.skin.AeroButtonSkin";
 }
 
 .button, .toggle-button{
@@ -144,7 +144,7 @@
 *                                           *
 *********************************************/
 .text-field{
-    -fx-skin:"com.aerofx_project.controls.skin.AeroTextFieldSkin";
+    -fx-skin:"org.aerofx.controls.skin.AeroTextFieldSkin";
    /* If four values are used, the sides are top, right, bottom, left. */
    -fx-border-color: rgb(170,170,178) rgb(218,220,230) rgb(226,231.0,239) rgb(226,224,234);
    -fx-background-color: rgb(255,255,255);
@@ -175,7 +175,7 @@
 }
 /* TODO: Style the mark by using a fx-shape */
 .check-box{
-    -fx-skin:"com.aerofx_project.controls.skin.AeroCheckBoxSkin";
+    -fx-skin:"org.aerofx.controls.skin.AeroCheckBoxSkin";
     -fx-label-padding: 0.0em 0.0em 0.0em 0.05em;
 }
 
@@ -247,7 +247,7 @@
 }
 
 .radio-button{
-    -fx-skin:"com.aerofx_project.controls.skin.AeroRadioButtonSkin";
+    -fx-skin:"org.aerofx.controls.skin.AeroRadioButtonSkin";
     -fx-label-padding: 0.0em 0.0em 0.0em 0.35em;
 }
 
@@ -324,7 +324,7 @@
 *                                           *
 *********************************************/
 .tab-pane{
-    -fx-skin:"com.aerofx_project.controls.skin.AeroTabPaneSkin";
+    -fx-skin:"org.aerofx.controls.skin.AeroTabPaneSkin";
     -fx-tab-min-height: 1.8333em; /* 22 */
     -fx-tab-max-height: 1.8333em; /* 22 */
 }
@@ -416,7 +416,7 @@
 *                                           *
 *********************************************/
 .group-box{
-    -fx-skin: "com.aerofx_project.controls.skin.AeroGroupBoxSkin";
+    -fx-skin: "org.aerofx.controls.skin.AeroGroupBoxSkin";
 }
 
 .group-box-border{

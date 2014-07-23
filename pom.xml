@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>aerofx-parent</artifactId>
     <version>0.1-SNAPSHOT</version>
-    <groupId>com.aerofx</groupId>
+    <groupId>org.aerofx</groupId>
     <packaging>pom</packaging>
     <name>AeroFX Parent</name>
 

@@ -27,18 +27,15 @@
  * either expressed or implied, of the FreeBSD Project.
  */
 
-package com.aerofx_project.demo;
+package org.aerofx.demo;
 
-import com.aerofx_project.AeroFX;
+import org.aerofx.AeroFX;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-/**
- * Created by Matthias on 27.05.2014.
- */
 public class SystemSettingsDemo extends Application {
     /**
      *

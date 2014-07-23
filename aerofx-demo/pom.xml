@@ -6,7 +6,7 @@
     <name>AeroFX-Demo</name>
 
     <parent>
-        <groupId>com.aerofx</groupId>
+        <groupId>org.aerofx</groupId>
         <artifactId>aerofx-parent</artifactId>
         <version>0.1-SNAPSHOT</version>
         <relativePath>../</relativePath>

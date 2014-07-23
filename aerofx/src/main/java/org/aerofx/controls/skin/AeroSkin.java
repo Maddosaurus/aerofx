@@ -27,10 +27,9 @@
  * either expressed or implied, of the FreeBSD Project.
  */
 
-package com.aerofx_project.demo;
+package org.aerofx.controls.skin;
 
 /**
- * Created by Matthias on 27.05.2014.
+ * Interface from which all AeroFX skin classes should derive
  */
-public class SystemSettingsDemoController {
-}
+public interface AeroSkin {}
