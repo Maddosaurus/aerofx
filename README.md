@@ -1,4 +1,4 @@
-![Build](https://travis-ci.org/s1gpwr/aerofx.svg?branch=master)
+[![Build](https://travis-ci.org/s1gpwr/aerofx.svg?branch=master)](https://travis-ci.org/s1gpwr/aerofx)
 
 # README #
 
