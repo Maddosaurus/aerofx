@@ -58,6 +58,6 @@ public class GroupboxDemo extends Application{
         root.getChildren().add(tp);
         primaryStage.setScene(myScene);
         primaryStage.show();
-        //ScenicView.show(myScene);
     }
+    public static void main(String... args) { launch(args); }
 }
