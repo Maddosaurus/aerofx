@@ -1,3 +1,5 @@
+![Build](https://travis-ci.org/s1gpwr/aerofx.svg?branch=master)
+
 # README #
 
 * Native Windows 7-Skin for JavaFX8
