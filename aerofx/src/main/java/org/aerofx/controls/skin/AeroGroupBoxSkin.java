@@ -29,7 +29,11 @@
 
 package org.aerofx.controls.skin;
 
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 import javafx.geometry.Insets;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.SkinBase;
 import javafx.scene.control.TitledPane;
@@ -46,6 +50,8 @@ public class AeroGroupBoxSkin extends SkinBase<TitledPane> implements AeroSkin {
     private Rectangle captionBg;
     private Rectangle groupBoxBg;
     private Rectangle clippingRect;
+
+    InvalidationListener focusListener;
 
     /**
      * Takes a TitledPane, styles it as GroupBox and binds the textProperty to the title.
@@ -68,7 +74,22 @@ public class AeroGroupBoxSkin extends SkinBase<TitledPane> implements AeroSkin {
         if (p.getContent() != null)
             getChildren().add(p.getContent());
         p.setPadding(new Insets(7, 0, 0, 0));
+
+        focusListener = new InvalidationListener() {
+            @Override
+            public void invalidated(Observable observable) {
+                if (p.isFocused()) {
+                    Node content = p.getContent();
+                    if (content != null && content instanceof Parent) {
+                        if (((Parent) content).getChildrenUnmodifiable().size() > 0)
+                            ((Parent) content).getChildrenUnmodifiable().get(0).requestFocus();
+                    }
+                }
+            }
+        };
+        p.focusedProperty().addListener(focusListener);
     }
+
 
     /**
      * Override to have full control over layout.
@@ -97,7 +118,12 @@ public class AeroGroupBoxSkin extends SkinBase<TitledPane> implements AeroSkin {
             getSkinnable().getContent().relocate(x, y);
             getSkinnable().getContent().resize(w, h);
         }
+    }
 
+    @Override
+    public void dispose() {
+        super.dispose();
+        getSkinnable().focusedProperty().removeListener(focusListener);
     }
 }
 

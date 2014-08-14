@@ -470,3 +470,14 @@
     -fx-translate-x: 4px;
     -fx-alignment: center-left;
 }
+
+
+/********************************************
+*                                           *
+*       Separator                           *
+*                                           *
+*********************************************/
+.separator:horizontal{
+    -fx-border-color:rgb(160,160,160);
+    -fx-border-width: 0.5;
+}
