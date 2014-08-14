@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>aerofx-parent</artifactId>
-    <version>0.2-SNAPSHOT</version>
+    <version>0.2</version>
     <groupId>org.aerofx</groupId>
     <packaging>pom</packaging>
     <name>AeroFX Parent</name>
