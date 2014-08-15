@@ -1,7 +1,7 @@
 # README #
 
 * JavaFX 8 skin with a native Windows 7 look & feel
-* Version 0.2-SNAPSHOT and 0.1 (Release)
+* Version 0.3-SNAPSHOT and 0.2 (Release)
 
 ### Build Status ###
 [![Build](https://travis-ci.org/s1gpwr/aerofx.svg?branch=master)](https://travis-ci.org/s1gpwr/aerofx)
