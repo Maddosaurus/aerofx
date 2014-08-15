@@ -25,7 +25,7 @@ Just add this dependency to your pom.xml:
 <dependency >
   <groupId >org.aerofx</ groupId >
   <artifactId>aerofx</artifactId>
-  <version>0.1 </version>
+  <version>0.2</version>
 </dependency >
 ```
 
