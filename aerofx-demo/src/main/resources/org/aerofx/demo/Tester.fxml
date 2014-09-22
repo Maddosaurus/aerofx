@@ -29,11 +29,15 @@
   ~ either expressed or implied, of the FreeBSD Project.
   -->
 
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.AnchorPane?>
+
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="25.0" layoutY="23.0" prefHeight="21.0" prefWidth="60.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="25.0" layoutY="23.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="60.0" text="Button">
+         <tooltip>
+            <Tooltip text="Look, a tooltip" />
+         </tooltip></Button>
       <Label layoutX="25.0" layoutY="63.0" text="Just some Text" />
       <TextField layoutX="25.0" layoutY="88.0" />
       <CheckBox layoutX="193.0" layoutY="26.0" mnemonicParsing="false" text="CheckBox" />
@@ -48,7 +52,7 @@
       <TitledPane layoutX="25.0" layoutY="140.0" prefHeight="50.0" prefWidth="70.0" text="Untitled">
        <content><AnchorPane>
           <children>
-              <Button layoutX="25.0" layoutY="23.0" prefHeight="21.0" prefWidth="60.0" mnemonicParsing="false" text="Child" />
+              <Button layoutX="25.0" layoutY="23.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="60.0" text="Child" />
           </children>
        </AnchorPane></content>
       </TitledPane>

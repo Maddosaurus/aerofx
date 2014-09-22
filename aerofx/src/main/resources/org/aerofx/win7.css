@@ -481,3 +481,22 @@
     -fx-border-color:rgb(160,160,160);
     -fx-border-width: 0.5;
 }
+
+
+/********************************************
+*                                           *
+*       Tooltip                             *
+*                                           *
+*********************************************/
+.tooltip{
+    -fx-border-color: rgb(117,117,117);
+    -fx-border-width: 1;
+    -fx-border-radius: 2;
+    -fx-background-insets: 0;
+    -fx-background-radius: 2;
+    -fx-background-color:
+        linear-gradient(to bottom, rgb(255,255,255) 0%, rgb(228,225,241) 100%);
+    -fx-padding: 2 4 2 4;
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.5) , 10, 0.0 , 2 , 2 );
+
+}
