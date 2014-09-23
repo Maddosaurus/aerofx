@@ -32,26 +32,28 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.collections.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="25.0" layoutY="59.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="60.0" text="Button">
+      <Button layoutX="360.0" layoutY="55.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="128.0" text="Tooltip target">
          <tooltip>
             <Tooltip text="Look, a tooltip" />
          </tooltip></Button>
-      <Label layoutX="25.0" layoutY="84.0" text="Just some Text" />
-      <TextField layoutX="25.0" layoutY="109.0" />
-      <CheckBox layoutX="103.0" layoutY="54.0" mnemonicParsing="false" text="CheckBox" />
-      <RadioButton layoutX="193.0" layoutY="92.0" mnemonicParsing="false" selected="true" text="RadioButton">
+      <Label layoutX="14.0" layoutY="134.0" text="Just some Text" />
+      <TextField layoutX="14.0" layoutY="159.0" />
+      <CheckBox layoutX="387.0" layoutY="113.0" mnemonicParsing="false" text="CheckBox" />
+      <RadioButton layoutX="387.0" layoutY="190.0" mnemonicParsing="false" selected="true" text="RadioButton">
          <toggleGroup>
             <ToggleGroup fx:id="one" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton layoutX="193.0" layoutY="122.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$one" />
-      <CheckBox disable="true" layoutX="193.0" layoutY="54.0" mnemonicParsing="false" text="CheckBox" />
-      <RadioButton disable="true" layoutX="193.0" layoutY="152.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$one" />
-      <TitledPane layoutX="25.0" layoutY="140.0" prefHeight="50.0" prefWidth="70.0" text="Untitled">
-       <content><AnchorPane>
+      <RadioButton layoutX="387.0" layoutY="220.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$one" />
+      <CheckBox disable="true" layoutX="387.0" layoutY="142.0" mnemonicParsing="false" text="CheckBox" />
+      <RadioButton disable="true" layoutX="387.0" layoutY="250.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$one" />
+      <TitledPane layoutX="14.0" layoutY="212.0" prefHeight="50.0" prefWidth="70.0" text="Untitled">
+       <content>
+            <AnchorPane>
           <children>
               <Button layoutX="25.0" layoutY="23.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="60.0" text="Child" />
           </children>
@@ -82,6 +84,27 @@
           </Menu>
         </menus>
       </MenuBar>
+      <ComboBox layoutX="14.0" layoutY="68.0" prefWidth="150.0">
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Option1"/>
+                  <String fx:value="Option2"/>
+              </FXCollections>
+          </items>
+      </ComboBox>
+      <TreeView layoutX="174.0" layoutY="72.0" prefHeight="200.0" prefWidth="149.0">
+         <root>
+           <TreeItem value="FLayer one">
+               <children>
+                   <TreeItem>
+                       <value>
+                        <CheckBox text="ticme" />
+                     </value>
+                   </TreeItem>
+               </children>
+           </TreeItem>
+         </root>
+      </TreeView>
 
    </children>
 </AnchorPane>

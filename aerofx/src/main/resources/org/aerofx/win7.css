@@ -539,7 +539,7 @@
 }
 .menu-item > .left-container {
     -fx-padding: 0.458em 0.791em 0.458em 0.458em;
-    -fx-border-color: red;
+    /*-fx-border-color: red;*/
     -fx-border-width: 0 1 0 1;
 }
 
@@ -554,9 +554,85 @@
     -fx-pref-height: 4px;
     -fx-pref-width: 4px;
     -fx-background-color:
-    rgb(20,47,68),
-    rgb(11,130,199),
-    linear-gradient(to bottom right, rgb(255,255,255) 20%, rgb(11,130,199) 60%);
+        rgb(20,47,68),
+        rgb(11,130,199),
+        linear-gradient(to bottom right, rgb(255,255,255) 20%, rgb(11,130,199) 60%);
     -fx-background-insets: 0,1,2;
     -fx-background-radius: 1.0em;
+}
+
+
+/********************************************
+*                                           *
+*       Combobox                            *
+*                                           *
+*********************************************/
+.combo-box-base {
+    -fx-padding: 0;
+    -fx-background-color:
+        rgb(112,112,112),
+        linear-gradient(rgb(252,252,252), rgb(252,252,252)),
+        linear-gradient(rgb(242,242,242) 0%, rgb(235,235,235) 49%, rgb(221,221,221) 50%, rgb(207,207,207) 100%);
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-text-fill: -fx-text-base-color;
+}
+
+.combo-box-base > .arrow-button {
+    -fx-border-width: 0px;
+    -fx-background-color:
+        rgb(112,112,112),
+        linear-gradient(rgb(252,252,252), rgb(252,252,252)),
+        linear-gradient(rgb(242,242,242) 0%, rgb(235,235,235) 49%, rgb(221,221,221) 50%, rgb(207,207,207) 100%);
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-padding: 4 4 3 3;
+    -fx-text-fill: -fx-text-base-color;
+}
+
+.combo-box-base > .arrow-button > .arrow{
+    -fx-background-color: rgb(80,80,80);
+    -fx-background-insets: 0 0 -1 0, 0;
+    -fx-padding: 0.166667em 0.333333em 0.166667em 0.333333em; /* 2 4 2 4 */
+    -fx-shape: "M 0 0 h 7 l -3.5 4 z";
+}
+
+.combo-box > .list-cell {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-padding: 0.333333em 0.666667em 0.416667em 0.666667em; /* 4 8 5 8 */
+}
+
+.combo-box-base > .arrow-button  {
+    -fx-background-radius: 0 5 5 0, 0 4 4 0, 0 3 3 0;
+    -fx-padding: 0.5em 0.833333em 0.5em 0.833333em; /* 6 10 6 10 */
+    -fx-background-insets: 1 1 1 0, 1, 2;
+}
+
+.combo-box-base:hover,
+.combo-box-base:hover > .arrow-button {
+    -fx-background-color:
+    rgb(60,127,177),
+    linear-gradient(rgb(250,253,254),rgb(250,253,254)),
+    linear-gradient(rgb(234, 246, 253) 0%, rgb(217, 240, 252) 49%, rgb(190, 230, 253) 50%, rgb(167, 217, 245) 100%);
+}
+
+.combo-box-base:focused,
+.combo-box-base:focused > .arrow-button {
+    -fx-background-color:
+    rgb(44,98,139),
+    linear-gradient(rgb(158,176,186), rgb(158,176,186)),
+    linear-gradient(rgb(229,244,252) 0%, rgb(196,229,246) 49%, rgb(152,209,239) 50%, rgb(104,179,219) 100%);
+}
+
+.combo-box-popup > .list-view {
+    -fx-background-color: rgb(100,100,100), rgb(255,255,255);
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 8, 0.0, 0, 0);
+}
+
+.combo-box-popup  > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:hover {
+    -fx-background-color: rgb(30,144,255);
+    -fx-text-fill: white;
 }

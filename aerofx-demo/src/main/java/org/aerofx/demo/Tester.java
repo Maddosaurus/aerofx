@@ -42,7 +42,7 @@ public class Tester extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("Tester.fxml"));
         primaryStage.setTitle("Some random Tester");
-        Scene myScene = new Scene(root, 300, 200);
+        Scene myScene = new Scene(root, 500, 300);
         AeroFX.style();
         AeroFX.styleAllAsGroupBox(root);
         primaryStage.setScene(myScene);
