@@ -29,18 +29,19 @@
   ~ either expressed or implied, of the FreeBSD Project.
   -->
 
+<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="25.0" layoutY="23.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="60.0" text="Button">
+      <Button layoutX="25.0" layoutY="59.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="60.0" text="Button">
          <tooltip>
             <Tooltip text="Look, a tooltip" />
          </tooltip></Button>
-      <Label layoutX="25.0" layoutY="63.0" text="Just some Text" />
-      <TextField layoutX="25.0" layoutY="88.0" />
-      <CheckBox layoutX="193.0" layoutY="26.0" mnemonicParsing="false" text="CheckBox" />
+      <Label layoutX="25.0" layoutY="84.0" text="Just some Text" />
+      <TextField layoutX="25.0" layoutY="109.0" />
+      <CheckBox layoutX="103.0" layoutY="54.0" mnemonicParsing="false" text="CheckBox" />
       <RadioButton layoutX="193.0" layoutY="92.0" mnemonicParsing="false" selected="true" text="RadioButton">
          <toggleGroup>
             <ToggleGroup fx:id="one" />
@@ -56,6 +57,31 @@
           </children>
        </AnchorPane></content>
       </TitledPane>
+      <MenuBar layoutY="2.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+                  <RadioMenuItem mnemonicParsing="false" selected="true" text="Insert">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="foo" />
+                     </toggleGroup></RadioMenuItem>
+                  <RadioMenuItem mnemonicParsing="false" text="Overwrite" toggleGroup="$foo" />
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+                  <CheckMenuItem mnemonicParsing="false" text="Add wow" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
 
    </children>
 </AnchorPane>
