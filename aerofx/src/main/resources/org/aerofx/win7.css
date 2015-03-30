@@ -567,30 +567,25 @@
 *       Combobox                            *
 *                                           *
 *********************************************/
-.combo-box-base {
+.combo-box {
     -fx-padding: 0;
     -fx-background-color:
         rgb(112,112,112),
         linear-gradient(rgb(252,252,252), rgb(252,252,252)),
         linear-gradient(rgb(242,242,242) 0%, rgb(235,235,235) 49%, rgb(221,221,221) 50%, rgb(207,207,207) 100%);
-    -fx-background-insets: 0,1,2;
+    -fx-background-insets: 0, 1,2;
     -fx-background-radius: 3,2,1;
     -fx-text-fill: -fx-text-base-color;
 }
 
-.combo-box-base > .arrow-button {
+.combo-box > .arrow-button {
     -fx-border-width: 0px;
-    -fx-background-color:
-        rgb(112,112,112),
-        linear-gradient(rgb(252,252,252), rgb(252,252,252)),
-        linear-gradient(rgb(242,242,242) 0%, rgb(235,235,235) 49%, rgb(221,221,221) 50%, rgb(207,207,207) 100%);
-    -fx-background-insets: 0,1,2;
-    -fx-background-radius: 3,2,1;
+    -fx-background-color: transparent;
     -fx-padding: 4 4 3 3;
     -fx-text-fill: -fx-text-base-color;
 }
 
-.combo-box-base > .arrow-button > .arrow{
+.combo-box > .arrow-button > .arrow{
     -fx-background-color: rgb(80,80,80);
     -fx-background-insets: 0 0 -1 0, 0;
     -fx-padding: 0.166667em 0.333333em 0.166667em 0.333333em; /* 2 4 2 4 */
@@ -602,24 +597,23 @@
     -fx-background-color: transparent;
     -fx-text-fill: -fx-text-base-color;
     -fx-padding: 0.333333em 0.666667em 0.416667em 0.666667em; /* 4 8 5 8 */
+    -fx-border-width: 0;
 }
 
-.combo-box-base > .arrow-button  {
+.combo-box > .arrow-button  {
     -fx-background-radius: 0 5 5 0, 0 4 4 0, 0 3 3 0;
     -fx-padding: 0.5em 0.833333em 0.5em 0.833333em; /* 6 10 6 10 */
     -fx-background-insets: 1 1 1 0, 1, 2;
 }
 
-.combo-box-base:hover,
-.combo-box-base:hover > .arrow-button {
+.combo-box:hover {
     -fx-background-color:
     rgb(60,127,177),
     linear-gradient(rgb(250,253,254),rgb(250,253,254)),
     linear-gradient(rgb(234, 246, 253) 0%, rgb(217, 240, 252) 49%, rgb(190, 230, 253) 50%, rgb(167, 217, 245) 100%);
 }
 
-.combo-box-base:focused,
-.combo-box-base:focused > .arrow-button {
+.combo-box:focused {
     -fx-background-color:
     rgb(44,98,139),
     linear-gradient(rgb(158,176,186), rgb(158,176,186)),

@@ -56,6 +56,7 @@ public class AeroRadioButtonSkin extends RadioButtonSkin implements AeroSkin {
      */
     private Rectangle focusBorderRect;
     private InvalidationListener focusBorderListener;
+    private InvalidationListener mouseClickListener;
     private ChangeListener<? super Toggle> focusTraverseListener;
     private EventHandler<KeyEvent> keyListener;
 
@@ -110,7 +111,7 @@ public class AeroRadioButtonSkin extends RadioButtonSkin implements AeroSkin {
         super.layoutChildren(x, y, w, h);
         focusBorderRect.setX(x + 14);
         focusBorderRect.setY(y+1);
-        focusBorderRect.setWidth(w-18);
+        focusBorderRect.setWidth(w-12);
         focusBorderRect.setHeight(h);
 
         getSkinnable().lookup(".radio").relocate(0, 3);

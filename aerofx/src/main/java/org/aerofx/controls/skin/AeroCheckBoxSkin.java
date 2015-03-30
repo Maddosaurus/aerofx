@@ -67,7 +67,7 @@ public class AeroCheckBoxSkin extends CheckBoxSkin implements AeroSkin {
         super.layoutChildren(x, y, w, h);
         focusBorderRect.setX(x+17);
         focusBorderRect.setY(y+1);
-        focusBorderRect.setWidth(w-20);
+        focusBorderRect.setWidth(w-14);
         focusBorderRect.setHeight(h-2);
     }
 
