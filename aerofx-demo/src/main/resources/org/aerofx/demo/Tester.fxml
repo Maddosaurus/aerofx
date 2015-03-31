@@ -79,6 +79,8 @@
           <Menu mnemonicParsing="false" text="Help">
             <items>
               <MenuItem mnemonicParsing="false" text="About" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem disable="true" mnemonicParsing="false" text="Disabled" />
                   <CheckMenuItem mnemonicParsing="false" text="Add wow" />
             </items>
           </Menu>
@@ -87,8 +89,8 @@
       <ComboBox layoutX="14.0" layoutY="68.0" prefWidth="150.0">
           <items>
               <FXCollections fx:factory="observableArrayList">
-                  <String fx:value="Option1"/>
-                  <String fx:value="Option2"/>
+                  <String fx:value="Option1" />
+                  <String fx:value="Option2" />
               </FXCollections>
           </items>
       </ComboBox>

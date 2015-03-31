@@ -505,15 +505,16 @@
 *                                           *
 *********************************************/
 .menu-bar{
-    -fx-border-color: 
-        rgb(169,191,214) rgb(233,237,246) rgb(182,188,204) rgb(233,237,246);
+    /*-fx-border-color:
+        rgb(169,191,214) rgb(233,237,246) rgb(182,188,204) rgb(233,237,246);*/
     -fx-background-color:
         linear-gradient(to bottom, rgb(252,253,254) 0%, rgb(229,234,245) 35%, rgb(212,219,237) 36%, rgb(225,230,246)100%);
-    -fx-padding: 2 4 2 4;
+    -fx-padding: 0 4 0 4;
+    -fx-use-system-menu-bar: true;
 }
 
 .menu{
-    -fx-padding: 0 4 0 4;
+    -fx-padding: 3 4 3 4;
 }
 
 .menu:show-mnemonics > .mnemonic-underline{
@@ -524,29 +525,47 @@
     -fx-background-color: rgb(42,144,255);
 }
 
-/* TODO: What about first&last element? Style them with top&bottom*/
 .menu-item{
-    -fx-border-color: rgb(141,141,141);
-    -fx-border-width: 0 1 0 1;
-    -fx-background-color: rgb(255,255,255), rgb(241,241,241);
-    -fx-background-insets: 0, 0 2 0 2;
-    -fx-padding: 2 4 2 4;
+    -fx-background-color: /*red;*/rgb(241,241,241);
+    -fx-background-insets: 0;
+    -fx-padding: 0;/* 2 4 2 4;*/
 }
 
 .menu-item > .label{
-    -fx-padding: 2 4 2 4;
-
+    -fx-padding: 4 10 4 4;
 }
+
 .menu-item > .left-container {
     -fx-padding: 0.458em 0.791em 0.458em 0.458em;
-    /*-fx-border-color: red;*/
     -fx-border-width: 0 1 0 1;
 }
 
 .menu-item:hover{
-    -fx-background-insets: 2,3,4;
+    -fx-background-insets: 1 2 1 2,2 3 2 3 ,3 4 3 4;
     -fx-background-color:
-        rgb(159,212,233),rgb(224,237,243), linear-gradient(to bottom, rgb(228,237,242)0%, rgb(214,233,242));
+        rgb(174,207,247),rgb(245,245,245), linear-gradient(to bottom, rgb(239,240,240)0%, rgb(239,240,240)70%, rgb(231,237,245)71%);
+    -fx-background-radius: 1,2,3;
+}
+
+.menu-item:disabled{
+    -fx-background-insets: 0;
+    -fx-padding: 0;/* 2 4 2 4;*/
+}
+
+.menu-item:disabled > .label {
+    -fx-text-fill: rgb(114,112,125);
+}
+
+.menu-item:disabled:hover{
+    -fx-background-insets: 1 2 1 2,2 3 2 3,3 4 3 4;
+    -fx-background-color: rgb(150,150,150), rgb(200,200,200);
+    -fx-background-radius: 1,2,3;
+}
+
+.separator{
+    -fx-background-color: linear-gradient(to bottom,rgb(224,224,244)0%,rgb(254,254,254)100%);
+    -fx-background-insets: 1;
+    -fx-padding: 0;
 }
 
 .radio-menu-item:checked > .left-container > .radio {
@@ -559,6 +578,20 @@
         linear-gradient(to bottom right, rgb(255,255,255) 20%, rgb(11,130,199) 60%);
     -fx-background-insets: 0,1,2;
     -fx-background-radius: 1.0em;
+}
+
+
+/* Needed, as JavaFX menus are, in fact, custom context menus*/
+/********************************************
+*                                           *
+*       Context-Menu                        *
+*                                           *
+*********************************************/
+.context-menu {
+    -fx-background-color: rgb(240,240,240);
+    -fx-background-insets: 0;
+    -fx-border-color: rgb(151,151,151);
+    -fx-padding: 0;
 }
 
 
